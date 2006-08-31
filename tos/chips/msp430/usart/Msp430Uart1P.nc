@@ -31,37 +31,38 @@
 
 /**
  * @author Jonathan Hui <jhui@archedrock.com>
- * @version $Revision: 1.1.2.5 $ $Date: 2006-08-03 18:10:41 $
+ * @author Vlado Handziski <handzisk@tkn.tu-berlin.de>
+ * @version $Revision: 1.1.4.2 $ $Date: 2006-08-03 18:10:41 $
  */
 
-configuration Msp430SpiNoDma0P {
+configuration Msp430Uart1P {
 
   provides interface Resource[ uint8_t id ];
   provides interface ResourceConfigure[uint8_t id ];
-  provides interface SpiByte;
-  provides interface SpiPacket[ uint8_t id ];
+  provides interface Msp430UartControl as UartControl[ uint8_t id ];
+  provides interface SerialByteComm;
 
   uses interface Resource as UsartResource[ uint8_t id ];
-  uses interface Msp430SpiConfigure[ uint8_t id ];
+  uses interface Msp430UartConfigure[ uint8_t id ];
   uses interface HplMsp430UsartInterrupts as UsartInterrupts;
 
 }
 
 implementation {
 
-  components new Msp430SpiNoDmaP() as SpiP;
-  Resource = SpiP.Resource;
-  ResourceConfigure = SpiP.ResourceConfigure;
-  Msp430SpiConfigure = SpiP.Msp430SpiConfigure;
-  SpiByte = SpiP.SpiByte;
-  SpiPacket = SpiP.SpiPacket;
-  UsartResource = SpiP.UsartResource;
-  UsartInterrupts = SpiP.UsartInterrupts;
+  components new Msp430UartP() as UartP;
+  Resource = UartP.Resource;
+  ResourceConfigure = UartP.ResourceConfigure;
+  Msp430UartConfigure = UartP.Msp430UartConfigure;
+  UartControl = UartP.UartControl;
+  SerialByteComm = UartP.SerialByteComm;
+  UsartResource = UartP.UsartResource;
+  UsartInterrupts = UartP.UsartInterrupts;
 
-  components HplMsp430Usart0C as UsartC;
-  SpiP.Usart -> UsartC;
+  components HplMsp430Usart1C as UsartC;
+  UartP.Usart -> UsartC;
 
   components LedsC as Leds;
-  SpiP.Leds -> Leds;
+  UartP.Leds -> Leds;
 
 }

@@ -31,37 +31,35 @@
 
 /**
  * @author Jonathan Hui <jhui@archedrock.com>
- * @version $Revision: 1.1.2.5 $ $Date: 2006-08-03 18:10:41 $
+ * @version $Revision: 1.1.2.1 $ $Date: 2006-08-15 13:54:07 $
  */
 
-configuration Msp430SpiNoDma0P {
+configuration Msp430UsartShare0P {
 
+  provides interface HplMsp430UsartInterrupts as Interrupts[ uint8_t id ];
   provides interface Resource[ uint8_t id ];
-  provides interface ResourceConfigure[uint8_t id ];
-  provides interface SpiByte;
-  provides interface SpiPacket[ uint8_t id ];
+  provides interface ResourceRequested[ uint8_t id ];
+  provides interface ArbiterInfo;
 
-  uses interface Resource as UsartResource[ uint8_t id ];
-  uses interface Msp430SpiConfigure[ uint8_t id ];
-  uses interface HplMsp430UsartInterrupts as UsartInterrupts;
-
+  uses interface ResourceConfigure[ uint8_t id ];
 }
 
 implementation {
 
-  components new Msp430SpiNoDmaP() as SpiP;
-  Resource = SpiP.Resource;
-  ResourceConfigure = SpiP.ResourceConfigure;
-  Msp430SpiConfigure = SpiP.Msp430SpiConfigure;
-  SpiByte = SpiP.SpiByte;
-  SpiPacket = SpiP.SpiPacket;
-  UsartResource = SpiP.UsartResource;
-  UsartInterrupts = SpiP.UsartInterrupts;
+  components new Msp430UsartShareP() as UsartShareP;
+  Interrupts = UsartShareP;
+  UsartShareP.RawInterrupts -> UsartC;
+
+  components new FcfsArbiterC( MSP430_HPLUSART0_RESOURCE ) as ArbiterC;
+  Resource = ArbiterC;
+  ResourceRequested = ArbiterC;
+  ResourceConfigure = ArbiterC;
+  ArbiterInfo = ArbiterC;
+  UsartShareP.ArbiterInfo -> ArbiterC;
+  
+  components new AsyncStdControlDeferredPowerManagerC(1) as PowerManagerC;
+  PowerManagerC.ResourceController -> ArbiterC;
 
   components HplMsp430Usart0C as UsartC;
-  SpiP.Usart -> UsartC;
-
-  components LedsC as Leds;
-  SpiP.Leds -> Leds;
-
+  PowerManagerC.AsyncStdControl -> UsartC;
 }

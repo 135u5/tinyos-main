@@ -30,38 +30,38 @@
  */
 
 /**
+ * Provides an interface for USART0 on the MSP430.
+ *
  * @author Jonathan Hui <jhui@archedrock.com>
- * @version $Revision: 1.1.2.5 $ $Date: 2006-08-03 18:10:41 $
+ * @version $Revision: 1.1.2.1 $ $Date: 2006-08-15 13:54:07 $
  */
 
-configuration Msp430SpiNoDma0P {
+generic configuration Msp430Usart0C() {
 
-  provides interface Resource[ uint8_t id ];
-  provides interface ResourceConfigure[uint8_t id ];
-  provides interface SpiByte;
-  provides interface SpiPacket[ uint8_t id ];
+  provides interface Resource;
+  provides interface ResourceRequested;  
+  provides interface ArbiterInfo;
+  provides interface HplMsp430Usart;
+  provides interface HplMsp430UsartInterrupts;
 
-  uses interface Resource as UsartResource[ uint8_t id ];
-  uses interface Msp430SpiConfigure[ uint8_t id ];
-  uses interface HplMsp430UsartInterrupts as UsartInterrupts;
-
+  uses interface ResourceConfigure;
 }
 
 implementation {
 
-  components new Msp430SpiNoDmaP() as SpiP;
-  Resource = SpiP.Resource;
-  ResourceConfigure = SpiP.ResourceConfigure;
-  Msp430SpiConfigure = SpiP.Msp430SpiConfigure;
-  SpiByte = SpiP.SpiByte;
-  SpiPacket = SpiP.SpiPacket;
-  UsartResource = SpiP.UsartResource;
-  UsartInterrupts = SpiP.UsartInterrupts;
+  enum {
+    CLIENT_ID = unique( MSP430_HPLUSART0_RESOURCE ),
+  };
+
+  components Msp430UsartShare0P as UsartShareP;
+
+  Resource = UsartShareP.Resource[ CLIENT_ID ];
+  ResourceRequested = UsartShareP.ResourceRequested[ CLIENT_ID ];
+  ResourceConfigure = UsartShareP.ResourceConfigure[ CLIENT_ID ];
+  ArbiterInfo = UsartShareP.ArbiterInfo;
+  HplMsp430UsartInterrupts = UsartShareP.Interrupts[ CLIENT_ID ];
 
   components HplMsp430Usart0C as UsartC;
-  SpiP.Usart -> UsartC;
-
-  components LedsC as Leds;
-  SpiP.Leds -> Leds;
+  HplMsp430Usart = UsartC;
 
 }
