@@ -17,4 +17,4 @@ Known bugs/limitations:
 None.
 
 
-$Id: README.txt,v 1.2 2006-07-12 16:59:10 scipio Exp $
+$Id: README.txt,v 1.1.2.2 2006-06-23 14:07:13 janhauer Exp $

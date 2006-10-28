@@ -1,4 +1,4 @@
-/* $Id: DemoSensorStreamC.nc,v 1.2 2006-07-12 17:03:14 scipio Exp $
+/* $Id: DemoSensorStreamC.nc,v 1.1.2.2 2006-02-03 21:23:01 idgay Exp $
  * Copyright (c) 2005 Intel Corporation
  * All rights reserved.
  *

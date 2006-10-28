@@ -22,7 +22,7 @@
 /**
  * @author Ben Greenstein <ben@cs.ucla.edu>
  * @author Joe Polastre <info@moteiv.com>
- * @version $Revision: 1.2 $ $Date: 2006-07-12 17:01:42 $
+ * @version $Revision: 1.1.2.2 $ $Date: 2006-06-19 11:12:23 $
  */
 
 #include "Msp430Dma.h"

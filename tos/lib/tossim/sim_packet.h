@@ -30,7 +30,7 @@
  * @date   Jan 2 2006
  */
 
-// $Id: sim_packet.h,v 1.2 2006-07-12 17:02:36 scipio Exp $
+// $Id: sim_packet.h,v 1.1.2.1 2006-01-03 01:53:32 scipio Exp $
 
 #ifndef SIM_PACKET_H_INCLUDED
 #define SIM_PACKET_H_INCLUDED

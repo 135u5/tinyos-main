@@ -1,4 +1,4 @@
-/// $Id: HplAtm128TimerCtrl8.nc,v 1.2 2006-07-12 17:01:30 scipio Exp $
+/// $Id: HplAtm128TimerCtrl8.nc,v 1.1.2.3 2006-06-20 17:23:38 idgay Exp $
 
 /*
  * Copyright (c) 2004-2005 Crossbow Technology, Inc.  All rights reserved.

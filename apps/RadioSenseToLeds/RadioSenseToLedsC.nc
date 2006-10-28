@@ -1,4 +1,4 @@
-// $Id: RadioSenseToLedsC.nc,v 1.2 2006-07-12 16:59:10 scipio Exp $
+// $Id: RadioSenseToLedsC.nc,v 1.1.2.6 2006-01-28 00:26:24 gtolle Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2005 The Regents of the University  of California.  

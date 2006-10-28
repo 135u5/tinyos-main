@@ -1,4 +1,4 @@
-/* $Id: Queue.nc,v 1.2 2006-07-12 17:02:18 scipio Exp $ */
+/* $Id: Queue.nc,v 1.1.4.3 2006-06-26 17:05:33 scipio Exp $ */
 /*
  * Copyright (c) 2006 Stanford University.
  * All rights reserved.
@@ -36,7 +36,7 @@
  *
  *  @author Philip Levis
  *  @author Kyle Jamieson
- *  @date   $Date: 2006-07-12 17:02:18 $
+ *  @date   $Date: 2006-06-26 17:05:33 $
  */
 
    

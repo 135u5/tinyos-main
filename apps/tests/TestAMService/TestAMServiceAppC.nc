@@ -1,4 +1,4 @@
-// $Id: TestAMServiceAppC.nc,v 1.2 2006-07-12 16:59:15 scipio Exp $
+// $Id: TestAMServiceAppC.nc,v 1.1.2.3 2006-02-04 01:10:33 philipb Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2005 The Regents of the University  of California.  

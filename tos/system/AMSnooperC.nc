@@ -1,4 +1,4 @@
-// $Id: AMSnooperC.nc,v 1.2 2006-07-12 17:03:18 scipio Exp $
+// $Id: AMSnooperC.nc,v 1.1.2.4 2006-06-20 00:31:42 scipio Exp $
 /*
  * "Copyright (c) 2006 Stanford University. All rights reserved.
  *

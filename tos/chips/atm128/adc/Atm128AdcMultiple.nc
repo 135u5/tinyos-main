@@ -1,4 +1,4 @@
-/// $Id: Atm128AdcMultiple.nc,v 1.2 2006-07-12 17:01:18 scipio Exp $
+/// $Id: Atm128AdcMultiple.nc,v 1.1.2.4 2006-02-17 00:26:47 idgay Exp $
 
 /*
  * Copyright (c) 2004-2005 Crossbow Technology, Inc.  All rights reserved.

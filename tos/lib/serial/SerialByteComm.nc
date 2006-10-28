@@ -1,4 +1,4 @@
-//$Id: SerialByteComm.nc,v 1.2 2006-07-12 17:02:29 scipio Exp $
+//$Id: SerialByteComm.nc,v 1.1.2.4 2006-01-30 19:23:44 bengreenstein Exp $
 
 /* "Copyright (c) 2000-2005 The Regents of the University of California.  
  * All rights reserved.

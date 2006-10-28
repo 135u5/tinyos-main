@@ -1,4 +1,4 @@
-/// $Id: VoltageP.nc,v 1.2 2006-07-12 17:02:55 scipio Exp $
+/// $Id: VoltageP.nc,v 1.1.2.2 2006-06-20 17:14:29 idgay Exp $
 
 /*
  * Copyright (c) 2004-2005 Crossbow Technology, Inc.  All rights reserved.

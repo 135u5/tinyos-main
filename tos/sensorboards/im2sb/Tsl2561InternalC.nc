@@ -1,4 +1,4 @@
-/* $Id: Tsl2561InternalC.nc,v 1.2 2006-07-12 17:03:17 scipio Exp $ */
+/* $Id: Tsl2561InternalC.nc,v 1.1.2.3 2006-08-15 11:59:09 klueska Exp $ */
 /*
  * Copyright (c) 2005 Arch Rock Corporation 
  * All rights reserved. 
@@ -46,10 +46,9 @@ implementation {
 
   };
 
-  components new FcfsArbiterC( "Tsl2561.Resource" ) as Arbiter;
+  components new SimpleFcfsArbiterC( "Tsl2561.Resource" ) as Arbiter;
   components MainC;
   Resource = Arbiter;
-  MainC.SoftwareInit -> Arbiter;
   
   components new HplTSL2561LogicP(TSL2561_SLAVE_ADDR) as Logic;
   MainC.SoftwareInit -> Logic;
@@ -58,7 +57,7 @@ implementation {
   Logic.InterruptAlert -> GeneralIOC.GpioInterrupt[GPIO_TSL2561_LIGHT_INT];
   Logic.InterruptPin -> GeneralIOC.GeneralIO[GPIO_TSL2561_LIGHT_INT];
 
-  components HalPXA27xI2CMasterC as I2CC;
+  components new HalPXA27xI2CMasterC(TRUE) as I2CC;
   Logic.I2CPacket -> I2CC;
 
   components Tsl2561InternalP as Internal;

@@ -1,4 +1,4 @@
-// $Id: Packetizer.java,v 1.2 2006-07-12 16:59:57 scipio Exp $
+// $Id: Packetizer.java,v 1.1.2.7 2006-02-16 01:21:26 idgay Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2003 The Regents of the University  of California.  

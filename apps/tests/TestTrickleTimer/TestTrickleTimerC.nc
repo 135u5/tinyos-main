@@ -1,4 +1,4 @@
-// $Id: TestTrickleTimerC.nc,v 1.2 2006-07-12 16:59:29 scipio Exp $
+// $Id: TestTrickleTimerC.nc,v 1.1.2.1 2006-01-07 23:43:51 scipio Exp $
 /*
  * "Copyright (c) 2006 Stanford University. All rights reserved.
  *

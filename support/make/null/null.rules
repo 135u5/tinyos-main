@@ -1,5 +1,5 @@
 #-*-Makefile-*- vim:syntax=make
-#$Id: null.rules,v 1.2 2006-07-12 16:59:50 scipio Exp $
+#$Id: null.rules,v 1.1.2.2 2006-01-27 22:18:54 idgay Exp $
 
 define NULL_HELP
 

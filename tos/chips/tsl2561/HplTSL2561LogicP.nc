@@ -36,7 +36,7 @@
  * TSL256x HPL interface.
  *
  * @author Phil Buonadonna <pbuonadonna@archrock.com>
- * @version $Revision: 1.2 $ $Date: 2006-07-12 17:02:04 $
+ * @version $Revision: 1.1.2.2 $ $Date: 2006-07-06 23:19:47 $
  */
 
 #include "TSL256x.h"

@@ -1,5 +1,5 @@
 #-*-Makefile-*- vim:syntax=make
-#$Id: debugopt.extra,v 1.2 2006-07-12 16:59:51 scipio Exp $
+#$Id: debugopt.extra,v 1.1.2.2 2005-10-31 18:55:09 philipb Exp $
 
 OPTFLAGS += -O3 -g
 

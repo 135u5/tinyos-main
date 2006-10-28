@@ -1,4 +1,4 @@
-/* $Id: AdcStreamP.nc,v 1.2 2006-07-12 17:01:17 scipio Exp $
+/* $Id: AdcStreamP.nc,v 1.1.2.2 2006-02-17 00:26:47 idgay Exp $
  * Copyright (c) 2005 Intel Corporation
  * All rights reserved.
  *

@@ -27,8 +27,8 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  * - Revision -------------------------------------------------------------
- * $Revision: 1.2 $
- * $Date: 2006-07-12 16:59:10 $
+ * $Revision: 1.1.2.3 $
+ * $Date: 2006-07-01 18:10:50 $
  * @author: Jan Hauer
  * ========================================================================
  */

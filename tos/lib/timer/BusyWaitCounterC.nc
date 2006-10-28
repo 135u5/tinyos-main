@@ -1,4 +1,4 @@
-//$Id: BusyWaitCounterC.nc,v 1.2 2006-07-12 17:02:30 scipio Exp $
+//$Id: BusyWaitCounterC.nc,v 1.1.2.7 2006-02-04 00:33:59 vlahan Exp $
 
 /* "Copyright (c) 2000-2003 The Regents of the University of California.
  * All rights reserved.

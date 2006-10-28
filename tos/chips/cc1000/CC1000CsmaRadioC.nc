@@ -1,4 +1,4 @@
-/* $Id: CC1000CsmaRadioC.nc,v 1.3 2006-08-08 20:04:07 idgay Exp $
+/* $Id: CC1000CsmaRadioC.nc,v 1.1.2.20 2006-09-22 18:54:30 idgay Exp $
  * "Copyright (c) 2000-2005 The Regents of the University  of California.  
  * All rights reserved.
  *

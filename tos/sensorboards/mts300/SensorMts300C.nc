@@ -24,7 +24,7 @@
  *
  *  @author Martin Turon <mturon@xbow.com>
  *
- *  $Id: SensorMts300C.nc,v 1.2 2006-07-12 17:03:17 scipio Exp $
+ *  $Id: SensorMts300C.nc,v 1.1.2.1 2005-10-20 04:44:07 mturon Exp $
  */
 
 configuration SensorMts300C

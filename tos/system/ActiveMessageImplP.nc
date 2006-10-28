@@ -1,4 +1,4 @@
-// $Id: ActiveMessageImplP.nc,v 1.2 2006-07-12 17:03:18 scipio Exp $
+// $Id: ActiveMessageImplP.nc,v 1.1.2.4 2006-06-20 00:31:42 scipio Exp $
 /*									tab:4
  * "Copyright (c) 2005 The Regents of the University  of California.  
  * All rights reserved.

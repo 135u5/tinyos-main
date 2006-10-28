@@ -1,4 +1,4 @@
-// $Id: SerialAMSenderC.nc,v 1.2 2006-07-12 17:02:29 scipio Exp $
+// $Id: SerialAMSenderC.nc,v 1.1.2.2 2006-05-15 16:46:54 scipio Exp $
 /*
  * "Copyright (c) 2006 Stanford University. All rights reserved.
  *

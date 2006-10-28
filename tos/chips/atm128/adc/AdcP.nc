@@ -1,4 +1,4 @@
-/* $Id: AdcP.nc,v 1.2 2006-07-12 17:01:15 scipio Exp $
+/* $Id: AdcP.nc,v 1.1.2.5 2006-01-25 01:32:46 idgay Exp $
  * Copyright (c) 2005 Intel Corporation
  * All rights reserved.
  *

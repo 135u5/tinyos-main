@@ -1,4 +1,4 @@
-// $Id: Messenger.java,v 1.2 2006-07-12 16:59:59 scipio Exp $
+// $Id: Messenger.java,v 1.1.2.1 2005-05-23 22:12:00 idgay Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2003 The Regents of the University  of California.  

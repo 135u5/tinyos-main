@@ -1,4 +1,4 @@
-// $Id: DelugeStorageC.nc,v 1.2 2006-07-12 17:02:22 scipio Exp $
+// $Id: DelugeStorageC.nc,v 1.1.2.4 2005-08-03 01:32:11 jwhui Exp $
 
 /*									tab:4
  *

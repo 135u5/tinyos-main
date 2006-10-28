@@ -34,7 +34,7 @@
  * Digital Temperature Sensor. 
  *
  * @author Phil Buonadonna <pbuonadonna@archrock.com>
- * @version $Revision: 1.2 $ $Date: 2006-07-12 17:02:03 $
+ * @version $Revision: 1.1.2.2 $ $Date: 2006-07-06 23:20:16 $
  */
 
 #include "TMP175.h"

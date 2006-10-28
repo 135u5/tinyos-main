@@ -36,7 +36,7 @@
  * Note that only the data path uses split phase resource arbitration
  * 
  * @author Phil Buonadonna <pbuonadonna@archrock.com>
- * @version $Revision: 1.2 $ $Date: 2006-07-12 17:02:03 $
+ * @version $Revision: 1.1.2.3 $ $Date: 2006-07-06 23:20:16 $
  */
 
 generic module HalTMP175ReaderP()

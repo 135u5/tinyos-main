@@ -1,4 +1,4 @@
-/* $Id: RootControl.nc,v 1.2 2006-07-12 17:02:25 scipio Exp $ */
+/* $Id: RootControl.nc,v 1.1.2.1 2006-04-20 15:47:04 rfonseca76 Exp $ */
 /*
  * "Copyright (c) 2005 The Regents of the University  of California.  
  * All rights reserved.
@@ -23,7 +23,7 @@
 
 /** Controls whether the current node is a root of the tree
  *  @author Rodrigo Fonseca
- *  @date   $Date: 2006-07-12 17:02:25 $
+ *  @date   $Date: 2006-04-20 15:47:04 $
  */
 
 interface RootControl {

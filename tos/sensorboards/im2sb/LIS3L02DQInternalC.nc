@@ -1,4 +1,4 @@
-/* $Id: LIS3L02DQInternalC.nc,v 1.2 2006-07-12 17:03:16 scipio Exp $ */
+/* $Id: LIS3L02DQInternalC.nc,v 1.1.2.4 2006-08-15 11:59:09 klueska Exp $ */
 /*
  * Copyright (c) 2005 Arch Rock Corporation 
  * All rights reserved. 
@@ -43,20 +43,23 @@ configuration LIS3L02DQInternalC {
 }
 
 implementation {
-  components new FcfsArbiterC( "LIS3L02DQ.Resource" ) as Arbiter;
+  components new SimpleFcfsArbiterC( "LIS3L02DQ.Resource" ) as Arbiter;
   components MainC;
   Resource = Arbiter;
-  MainC.SoftwareInit -> Arbiter;
 
   components HplLIS3L02DQLogicSPIP as Logic;
   MainC.SoftwareInit -> Logic;
+
+  components GeneralIOC;
+  Logic.InterruptPin -> GeneralIOC.GeneralIO[GPIO_LIS3L02DQ_RDY_INT];
+  Logic.InterruptAlert -> GeneralIOC.GpioInterrupt[GPIO_LIS3L02DQ_RDY_INT];
 
   components HplPXA27xSSP1C;
   // 0: Motorola SPI
   // 3: random guess what SSP Clock Rate should be
   // 7: 8 bit data size OR 15: 16 bit data size?
   // FALSE: No "Receive without transmit"
-  components new HalPXA27xSpiPioM(0, 128, 7, FALSE) as HalSpi;
+  components new HalPXA27xSpiPioC(128, 7, FALSE) as HalSpi;
   HalSpi.SSP -> HplPXA27xSSP1C;
   MainC.SoftwareInit -> HalSpi;
   Logic.SpiPacket -> HalSpi.SpiPacket[unique("SPIInstance")];

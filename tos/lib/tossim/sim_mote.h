@@ -30,7 +30,7 @@
  */
 
 
-// $Id: sim_mote.h,v 1.2 2006-07-12 17:02:36 scipio Exp $
+// $Id: sim_mote.h,v 1.1.2.5 2006-01-13 18:52:52 scipio Exp $
 
 
 

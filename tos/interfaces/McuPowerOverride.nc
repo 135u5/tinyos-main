@@ -1,4 +1,4 @@
-/// $Id: McuPowerOverride.nc,v 1.2 2006-07-12 17:02:17 scipio Exp $
+/// $Id: McuPowerOverride.nc,v 1.1.2.3 2006-02-14 17:01:43 idgay Exp $
 
 /**
  * "Copyright (c) 2005 Stanford University. All rights reserved.

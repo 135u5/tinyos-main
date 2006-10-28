@@ -1,4 +1,4 @@
-// $Id: AMReceiverC.nc,v 1.2 2006-07-12 17:03:18 scipio Exp $
+// $Id: AMReceiverC.nc,v 1.1.2.3 2006-06-20 00:31:42 scipio Exp $
 /*
  * "Copyright (c) 2005 Stanford University. All rights reserved.
  *

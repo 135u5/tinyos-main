@@ -1,4 +1,4 @@
-/* $Id: PMICC.nc,v 1.2 2006-07-12 17:02:49 scipio Exp $ */
+/* $Id: PMICC.nc,v 1.1.2.2 2006-07-05 18:28:34 philipb Exp $ */
 /*
  * Copyright (c) 2005 Arched Rock Corporation 
  * All rights reserved. 

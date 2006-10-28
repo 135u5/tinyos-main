@@ -1,4 +1,4 @@
-//$Id: BitVectorC.nc,v 1.2 2006-07-12 17:03:18 scipio Exp $
+//$Id: BitVectorC.nc,v 1.1.2.3 2006-01-30 19:12:59 idgay Exp $
 
 /* "Copyright (c) 2000-2003 The Regents of the University of California.  
  * All rights reserved.

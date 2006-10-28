@@ -1,4 +1,4 @@
-// $Id: AlarmOne16C.nc,v 1.2 2006-07-12 17:02:50 scipio Exp $
+// $Id: AlarmOne16C.nc,v 1.1.2.2 2006-06-21 16:59:18 idgay Exp $
 /*
  * Copyright (c) 2005-2006 Intel Corporation
  * All rights reserved.

@@ -1,4 +1,4 @@
-/// $Id: Atm128TimerInitC.nc,v 1.2 2006-07-12 17:01:29 scipio Exp $
+/// $Id: Atm128TimerInitC.nc,v 1.1.2.2 2006-01-27 17:56:06 idgay Exp $
 
 /*
  * Copyright (c) 2004-2005 Crossbow Technology, Inc.  All rights reserved.

@@ -1,4 +1,4 @@
-/* $Id: NoPinC.nc,v 1.2 2006-07-12 17:03:20 scipio Exp $
+/* $Id: NoPinC.nc,v 1.1.2.1 2006-05-01 17:19:08 idgay Exp $
  * Copyright (c) 2006 Intel Corporation
  * All rights reserved.
  *

@@ -33,7 +33,7 @@
  * Types and definitions for the TI TMP175
  *
  * @author Phil Buonadonna <pbuonadonna@archrock.com>
- * @version $Revision: 1.2 $ $Date: 2006-07-12 17:02:04 $
+ * @version $Revision: 1.1.2.2 $ $Date: 2006-06-19 18:20:59 $
  */
 
 #ifndef _TMP175_H

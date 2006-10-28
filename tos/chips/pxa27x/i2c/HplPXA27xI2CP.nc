@@ -1,4 +1,4 @@
-/* $Id: HplPXA27xI2CP.nc,v 1.2 2006-07-12 17:01:54 scipio Exp $ */
+/* $Id: HplPXA27xI2CP.nc,v 1.1.2.6 2006-07-05 19:01:47 philipb Exp $ */
 /*
  * Copyright (c) 2005 Arch Rock Corporation 
  * All rights reserved. 

@@ -1,4 +1,4 @@
-/* $Id: im2sb.h,v 1.2 2006-07-12 17:03:17 scipio Exp $ */
+/* $Id: im2sb.h,v 1.1.2.2 2006-07-06 23:23:41 philipb Exp $ */
 /*
  * Copyright (c) 2005 Arch Rock Corporation 
  * All rights reserved. 
@@ -31,7 +31,7 @@
 /**
  * 
  * @author Phil Buonadonna <pbuonadonna@archrock.com>
- * Revision: $Revision: 1.2 $
+ * Revision: $Revision: 1.1.2.2 $
  *
  */
 

@@ -1,4 +1,4 @@
-/* $Id: MotePlatformP.nc,v 1.2 2006-07-12 17:02:57 scipio Exp $
+/* $Id: MotePlatformP.nc,v 1.1.2.3 2006-01-10 19:04:46 idgay Exp $
  * Copyright (c) 2005 Intel Corporation
  * All rights reserved.
  *

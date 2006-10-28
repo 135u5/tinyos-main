@@ -35,7 +35,7 @@
  * interface and provides the HplLIS3L02DQ HPL interface.
  *
  * @author Phil Buonadonna <pbuonadonna@archrock.com>
- * @version $Revision: 1.2 $ $Date: 2006-07-12 17:01:37 $
+ * @version $Revision: 1.1.2.2 $ $Date: 2006-07-06 23:21:40 $
  */
 
 module HplLIS3L02DQLogicSPIP

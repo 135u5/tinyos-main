@@ -1,4 +1,4 @@
-// $Id: BinaryInterferenceModelC.nc,v 1.2 2006-07-12 17:02:32 scipio Exp $
+// $Id: BinaryInterferenceModelC.nc,v 1.1.2.1 2005-12-19 23:51:20 scipio Exp $
 /*
  * "Copyright (c) 2005 Stanford University. All rights reserved.
  *
