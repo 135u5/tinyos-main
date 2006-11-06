@@ -1,4 +1,4 @@
-//  $Id: atm128hardware.h,v 1.2 2006-07-12 17:01:13 scipio Exp $
+//  $Id: atm128hardware.h,v 1.1.2.6 2006-02-17 22:51:18 idgay Exp $
 
 /*                                                                     tab:4
  *  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.  By

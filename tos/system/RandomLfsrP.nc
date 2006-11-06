@@ -1,4 +1,4 @@
-// $Id: RandomLfsrP.nc,v 1.2 2006-07-12 17:03:20 scipio Exp $
+// $Id: RandomLfsrP.nc,v 1.1.2.3 2006-01-29 18:07:50 scipio Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2003 The Regents of the University  of California.  

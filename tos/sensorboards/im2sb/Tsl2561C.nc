@@ -1,4 +1,4 @@
-/* $Id: Tsl2561C.nc,v 1.2 2006-07-12 17:03:16 scipio Exp $ */
+/* $Id: Tsl2561C.nc,v 1.1.2.1 2006-07-06 23:26:24 philipb Exp $ */
 /*
  * Copyright (c) 2005 Arch Rock Corporation 
  * All rights reserved. 

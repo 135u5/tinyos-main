@@ -1,4 +1,4 @@
-// $Id: MeasureClockC.nc,v 1.2 2006-07-12 17:02:51 scipio Exp $
+// $Id: MeasureClockC.nc,v 1.1.2.8 2006-06-21 16:59:18 idgay Exp $
 /*
  * Copyright (c) 2006 Intel Corporation
  * All rights reserved.

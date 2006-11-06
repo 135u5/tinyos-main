@@ -1,4 +1,4 @@
-//$Id: HilTimerMilliC.nc,v 1.2 2006-07-12 17:02:52 scipio Exp $
+//$Id: HilTimerMilliC.nc,v 1.1.2.2 2006-01-27 21:52:11 idgay Exp $
 
 /* "Copyright (c) 2000-2003 The Regents of the University of California.  
  * All rights reserved.

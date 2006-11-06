@@ -1,4 +1,4 @@
-// $Id: PlatformSerialC.nc,v 1.2 2006-07-12 17:02:59 scipio Exp $
+// $Id: PlatformSerialC.nc,v 1.1.2.2 2006-01-27 20:24:16 idgay Exp $
 /*
  * Copyright (c) 2005-2006 Intel Corporation
  * All rights reserved.

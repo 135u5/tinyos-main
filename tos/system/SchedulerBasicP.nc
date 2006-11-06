@@ -1,4 +1,4 @@
-// $Id: SchedulerBasicP.nc,v 1.2 2006-07-12 17:03:21 scipio Exp $
+// $Id: SchedulerBasicP.nc,v 1.1.2.6 2006-06-20 00:31:42 scipio Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2003 The Regents of the University  of California.  

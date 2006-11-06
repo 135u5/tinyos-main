@@ -1,4 +1,4 @@
-/* $Id: VoltageNowC.nc,v 1.2 2006-07-12 17:02:53 scipio Exp $
+/* $Id: VoltageNowC.nc,v 1.1.2.2 2006-02-16 18:45:51 idgay Exp $
  * Copyright (c) 2006 Intel Corporation
  * All rights reserved.
  *

@@ -1,4 +1,4 @@
-// $Id: ActiveMessageC.nc,v 1.2 2006-07-12 17:02:31 scipio Exp $
+// $Id: ActiveMessageC.nc,v 1.1.2.2 2006-06-07 01:27:21 scipio Exp $
 /*
  * "Copyright (c) 2005 Stanford University. All rights reserved.
  *

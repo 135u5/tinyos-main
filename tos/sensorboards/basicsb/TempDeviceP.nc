@@ -1,4 +1,4 @@
-/* $Id: TempDeviceP.nc,v 1.2 2006-07-12 17:03:15 scipio Exp $
+/* $Id: TempDeviceP.nc,v 1.1.2.2 2006-02-16 18:54:15 idgay Exp $
  * Copyright (c) 2006 Intel Corporation
  * All rights reserved.
  *

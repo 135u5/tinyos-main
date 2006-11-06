@@ -21,7 +21,7 @@
 
 /**
  * @author Ben Greenstein <ben@cs.ucla.edu>
- * @version $Revision: 1.2 $ $Date: 2006-07-12 17:01:41 $
+ * @version $Revision: 1.1.2.2 $ $Date: 2006-06-19 11:12:23 $
  */
 
 interface HplMsp430DmaInterrupt {

@@ -1,4 +1,4 @@
-/// $Id: HplAtm128SpiP.nc,v 1.2 2006-07-12 17:01:28 scipio Exp $
+/// $Id: HplAtm128SpiP.nc,v 1.1.2.4 2006-03-13 23:07:53 scipio Exp $
 
 /*
  * "Copyright (c) 2005 Stanford University. All rights reserved.

@@ -1,4 +1,4 @@
-// $Id: SFWindow.java,v 1.2 2006-07-12 16:59:58 scipio Exp $
+// $Id: SFWindow.java,v 1.1.2.1 2005-05-23 22:11:49 idgay Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2003 The Regents of the University  of California.  

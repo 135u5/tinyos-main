@@ -1,4 +1,4 @@
-// $Id: pxa27x_registers.h,v 1.2 2006-07-12 17:01:51 scipio Exp $ 
+// $Id: pxa27x_registers.h,v 1.1.2.8 2006-07-05 20:00:05 philipb Exp $ 
 
 /*									tab:4
  *  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.  By

@@ -1,4 +1,4 @@
-/// $Id: McuSleep.nc,v 1.2 2006-07-12 17:02:17 scipio Exp $
+/// $Id: McuSleep.nc,v 1.1.2.2 2005-10-26 17:52:47 scipio Exp $
 
 /**
  * "Copyright (c) 2005 Stanford University. All rights reserved.

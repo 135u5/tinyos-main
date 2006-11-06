@@ -1,4 +1,4 @@
-// $Id: sim_event_queue.c,v 1.2 2006-07-12 17:02:36 scipio Exp $
+// $Id: sim_event_queue.c,v 1.1.2.3 2005-11-22 23:29:13 scipio Exp $
 
 /*									tab:4
 * "Copyright (c) 2005 Stanford University. All rights reserved.

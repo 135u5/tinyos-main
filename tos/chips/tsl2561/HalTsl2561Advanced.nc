@@ -1,4 +1,4 @@
-/* $Id: HalTsl2561Advanced.nc,v 1.2 2006-07-12 17:02:04 scipio Exp $ */
+/* $Id: HalTsl2561Advanced.nc,v 1.1.2.1 2006-07-06 23:19:47 philipb Exp $ */
 /*
  * Copyright (c) 2005 Arch Rock Corporation 
  * All rights reserved. 

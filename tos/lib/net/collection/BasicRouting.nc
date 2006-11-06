@@ -1,4 +1,4 @@
-/* $Id: BasicRouting.nc,v 1.2 2006-07-12 17:02:23 scipio Exp $ */
+/* $Id: BasicRouting.nc,v 1.1.2.3 2006-04-26 14:41:46 rfonseca76 Exp $ */
 /*
  * "Copyright (c) 2005 The Regents of the University  of California.  
  * All rights reserved.
@@ -23,7 +23,7 @@
 
 /** BasicRouting is to be implemented by all routing engines.
  *  @author Rodrigo Fonseca
- *  @date   $Date: 2006-07-12 17:02:23 $
+ *  @date   $Date: 2006-04-26 14:41:46 $
  */
 interface BasicRouting {
     /** Get a set of neighbors that make progress towards the destination.

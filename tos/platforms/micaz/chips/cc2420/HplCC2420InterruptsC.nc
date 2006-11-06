@@ -31,7 +31,7 @@
 
 /**
  * @author Jonathan Hui <jhui@archrock.com>
- * @version $Revision: 1.2 $ $Date: 2006-07-12 17:02:57 $
+ * @version $Revision: 1.1.2.6 $ $Date: 2006-06-20 18:56:06 $
  */
 
 configuration HplCC2420InterruptsC {

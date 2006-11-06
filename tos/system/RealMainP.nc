@@ -1,4 +1,4 @@
-// $Id: RealMainP.nc,v 1.2 2006-07-12 17:03:21 scipio Exp $
+// $Id: RealMainP.nc,v 1.1.2.3 2006-01-18 22:36:17 scipio Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2003 The Regents of the University  of California.  
@@ -31,7 +31,7 @@
 /*
  *
  * Authors:		Philip Levis
- * Date last modified:  $Id: RealMainP.nc,v 1.2 2006-07-12 17:03:21 scipio Exp $
+ * Date last modified:  $Id: RealMainP.nc,v 1.1.2.3 2006-01-18 22:36:17 scipio Exp $
  *
  */
 

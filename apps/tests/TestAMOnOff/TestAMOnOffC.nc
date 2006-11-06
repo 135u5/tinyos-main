@@ -1,4 +1,4 @@
-// $Id: TestAMOnOffC.nc,v 1.2 2006-07-12 16:59:14 scipio Exp $
+// $Id: TestAMOnOffC.nc,v 1.1.2.7 2006-06-13 17:28:46 idgay Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2005 The Regents of the University  of California.  

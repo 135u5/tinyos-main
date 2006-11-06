@@ -1,4 +1,4 @@
-// $Id: Atm128I2C.h,v 1.2 2006-07-12 17:01:20 scipio Exp $
+// $Id: Atm128I2C.h,v 1.1.2.5 2006-06-08 03:22:03 scipio Exp $
 
 /*
  * Copyright (c) 2004-2005 Crossbow Technology, Inc.  All rights reserved.

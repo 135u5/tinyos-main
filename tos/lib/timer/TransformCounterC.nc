@@ -1,4 +1,4 @@
-//$Id: TransformCounterC.nc,v 1.2 2006-07-12 17:02:31 scipio Exp $
+//$Id: TransformCounterC.nc,v 1.1.2.5 2006-01-30 21:31:27 idgay Exp $
 
 /* "Copyright (c) 2000-2003 The Regents of the University of California.  
  * All rights reserved.

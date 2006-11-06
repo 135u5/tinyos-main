@@ -1,4 +1,4 @@
-// $Id: NoLedsC.nc,v 1.2 2006-07-12 17:03:20 scipio Exp $
+// $Id: NoLedsC.nc,v 1.1.2.2 2005-08-07 21:12:50 scipio Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2005 The Regents of the University  of California.  

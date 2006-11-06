@@ -34,7 +34,7 @@
  * connected to a TI MSP430 processor.
  *
  * @author Jonathan Hui <jhui@archrock.com>
- * @version $Revision: 1.2 $ $Date: 2006-07-12 17:03:08 $
+ * @version $Revision: 1.1.2.7 $ $Date: 2006-06-20 18:56:06 $
  */
 
 generic configuration HplCC2420SpiC() {

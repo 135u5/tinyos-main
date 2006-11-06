@@ -1,4 +1,4 @@
-/* $Id: HalLIS3L02DQReaderP.nc,v 1.2 2006-07-12 17:01:37 scipio Exp $ */
+/* $Id: HalLIS3L02DQReaderP.nc,v 1.1.2.1 2006-07-06 23:21:40 philipb Exp $ */
 /*
  * Copyright (c) 2005 Arch Rock Corporation 
  * All rights reserved. 

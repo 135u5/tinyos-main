@@ -34,7 +34,7 @@
  * Digital Temperature Sensor. 
  *
  * @author Phil Buonadonna <pbuonadonna@archrock.com>
- * @version $Revision: 1.2 $ $Date: 2006-07-12 17:02:03 $
+ * @version $Revision: 1.1.2.1 $ $Date: 2006-05-25 22:54:34 $
  */
 
 interface HplTMP175 {

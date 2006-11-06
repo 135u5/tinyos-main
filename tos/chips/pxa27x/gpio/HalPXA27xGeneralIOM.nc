@@ -1,4 +1,4 @@
-// $Id: HalPXA27xGeneralIOM.nc,v 1.2 2006-07-12 17:01:52 scipio Exp $
+// $Id: HalPXA27xGeneralIOM.nc,v 1.1.2.5 2006-10-18 19:30:51 philipb Exp $
 
 /*									tab:4
  *  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.  By
@@ -84,12 +84,24 @@ implementation {
     atomic call HplPXA27xGPIOPin.setGPDRbit[pin](FALSE);
     return;
   }
-
+  
+  async command bool GeneralIO.isInput[uint8_t pin]() {
+    bool result;
+    result = !call HplPXA27xGPIOPin.getGPLRbit[pin]();
+    return result;
+  }
+  
   async command void GeneralIO.makeOutput[uint8_t pin]() {
     atomic call HplPXA27xGPIOPin.setGPDRbit[pin](TRUE);
     return;
   }
 
+  async command bool GeneralIO.isOutput[uint8_t pin]() {
+    bool result;
+    result = call HplPXA27xGPIOPin.getGPDRbit[pin]();
+    return result;
+  }
+  
   async command error_t HalPXA27xGpioInterrupt.enableRisingEdge[uint8_t pin]() {
     atomic {
       call HplPXA27xGPIOPin.setGRERbit[pin](TRUE);

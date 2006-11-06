@@ -1,4 +1,4 @@
-// $Id: TaskBasic.nc,v 1.2 2006-07-12 17:02:20 scipio Exp $
+// $Id: TaskBasic.nc,v 1.1.2.7 2006-02-14 17:01:43 idgay Exp $
 /*									tab:4
  * "Copyright (c) 2004-5 The Regents of the University  of California.  
  * All rights reserved.

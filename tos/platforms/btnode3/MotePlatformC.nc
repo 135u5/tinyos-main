@@ -1,4 +1,4 @@
-/* $Id: MotePlatformC.nc,v 1.2 2006-07-12 17:02:42 scipio Exp $
+/* $Id: MotePlatformC.nc,v 1.1.2.1 2006-02-17 12:34:06 beutel Exp $
  * Copyright (c) 2006 ETH Zurich.
  * Copyright (c) 2005 Intel Corporation
  * All rights reserved.

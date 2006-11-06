@@ -1,4 +1,4 @@
-// $Id: BaseStationC.nc,v 1.2 2006-07-12 16:58:54 scipio Exp $
+// $Id: BaseStationC.nc,v 1.1.2.10 2006-05-27 21:18:09 henridf Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2003 The Regents of the University  of California.  

@@ -33,7 +33,7 @@
  * Hpl interface for the ST LIS3L02DQ 3-Axis Accelerometer
  *
  * @author Phil Buonadonna <pbuonadonna@archrock.com>
- * @version $Revision: 1.2 $ $Date: 2006-07-12 17:01:37 $
+ * @version $Revision: 1.1.2.1 $ $Date: 2006-05-25 22:56:59 $
  */
 
 interface HplLIS3L02DQ {

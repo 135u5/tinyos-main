@@ -1,4 +1,4 @@
-$Id: README.txt,v 1.2 2006-07-12 16:59:25 scipio Exp $
+$Id: README.txt,v 1.1.2.2 2006-06-15 12:04:30 klueska Exp $
 
 README for Null
 Author/Contact: tinyos-help@millennium.berkeley.edu

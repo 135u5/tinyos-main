@@ -1,4 +1,4 @@
-// $Id: HplCC1000InitP.nc,v 1.2 2006-07-12 17:02:42 scipio Exp $
+// $Id: HplCC1000InitP.nc,v 1.1.2.1 2006-02-17 12:34:07 beutel Exp $
 /*									tab:4
  * Copyright (c) 2006 ETH Zurich.  
  * Copyright (c) 2004-2005 The Regents of the University  of California.  

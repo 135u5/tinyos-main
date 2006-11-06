@@ -1,4 +1,4 @@
-// $Id: HplAt45db_chip.h,v 1.2 2006-07-12 17:02:54 scipio Exp $
+// $Id: HplAt45db_chip.h,v 1.1.2.1 2006-01-26 21:11:40 idgay Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2003 The Regents of the University  of California.  

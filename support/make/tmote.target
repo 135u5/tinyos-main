@@ -1,5 +1,5 @@
 #-*-Makefile-*- vim:syntax=make
-#$Id: tmote.target,v 1.2 2006-07-12 16:59:48 scipio Exp $
+#$Id: tmote.target,v 1.1.2.1 2005-03-23 19:34:55 cssharp Exp $
 
 TMOTE_REV ?= SKY
 

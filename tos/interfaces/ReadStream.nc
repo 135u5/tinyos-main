@@ -51,7 +51,7 @@
  * @param val_t the type of the object that will be returned
  *
  * @author Gilman Tolle <gtolle@archrock.com>
- * @version $Revision: 1.2 $ $Date: 2006-07-12 17:02:18 $
+ * @version $Revision: 1.1.2.4 $ $Date: 2006-06-20 18:56:06 $
  */
 
 interface ReadStream<val_t> {

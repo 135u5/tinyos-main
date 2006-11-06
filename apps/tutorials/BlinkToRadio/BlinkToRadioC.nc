@@ -1,4 +1,4 @@
-// $Id: BlinkToRadioC.nc,v 1.2 2006-07-12 16:59:33 scipio Exp $
+// $Id: BlinkToRadioC.nc,v 1.1.2.2 2006-02-09 17:17:48 idgay Exp $
 
 /*
  * "Copyright (c) 2000-2006 The Regents of the University  of California.  

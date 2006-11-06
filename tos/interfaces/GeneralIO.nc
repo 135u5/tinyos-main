@@ -1,4 +1,4 @@
-// $Id: GeneralIO.nc,v 1.2 2006-07-12 17:02:16 scipio Exp $
+// $Id: GeneralIO.nc,v 1.1.2.2 2006-09-28 19:57:08 jwhui Exp $
 
 /* "Copyright (c) 2000-2005 The Regents of the University of California.  
  * All rights reserved.
@@ -31,6 +31,7 @@ interface GeneralIO
   async command void toggle();
   async command bool get();
   async command void makeInput();
+  async command bool isInput();
   async command void makeOutput();
+  async command bool isOutput();
 }
-

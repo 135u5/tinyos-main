@@ -3,7 +3,7 @@
 # 
 # A do-nothing platform. A good target for mig when using external types.
 #
-# $Id: .platform,v 1.2 2006-07-12 17:02:58 scipio Exp $
+# $Id: .platform,v 1.1.2.2 2006-02-16 22:16:15 idgay Exp $
 #
 push( @includes, qw(
 
