@@ -1,4 +1,4 @@
-/* $Id: NestedResourceC.nc,v 1.3 2006-11-07 19:31:24 scipio Exp $
+/* $Id: NestedResourceC.nc,v 1.1.2.3 2006-08-15 11:59:09 klueska Exp $
  * Copyright (c) 2006 Intel Corporation
  * All rights reserved.
  *

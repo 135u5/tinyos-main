@@ -1,4 +1,4 @@
-// $Id: TestTimerSyncAppC.nc,v 1.3 2006-11-07 19:30:36 scipio Exp $
+// $Id: TestTimerSyncAppC.nc,v 1.1.2.4 2006-05-27 21:32:42 henridf Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2005 The Regents of the University  of California.  

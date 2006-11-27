@@ -1,4 +1,4 @@
-/* $Id: platform_message.h,v 1.3 2006-11-07 19:31:22 scipio Exp $
+/* $Id: platform_message.h,v 1.1.2.2 2006-01-23 01:04:42 vlahan Exp $
  * "Copyright (c) 2005 The Regents of the University  of California.  
  * All rights reserved.
  *
@@ -34,7 +34,7 @@
  * @author Philip Levis
  * @author Vlado Handziski (TDA5250 Modifications)
  * @date   May 16 2005
- * Revision:  $Revision: 1.3 $
+ * Revision:  $Revision: 1.1.2.2 $
  */
 
 

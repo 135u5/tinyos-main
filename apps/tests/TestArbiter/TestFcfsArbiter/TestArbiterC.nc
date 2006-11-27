@@ -55,8 +55,8 @@
  * <br>
  *
  * @author Kevin Klues <klues@tkn.tu-berlin.de>
- * @version  $Revision: 1.4 $
- * @date $Date: 2006-11-07 19:30:34 $
+ * @version  $Revision: 1.2.2.2 $
+ * @date $Date: 2006-11-07 00:45:55 $
  */
 
 #include "Timer.h"

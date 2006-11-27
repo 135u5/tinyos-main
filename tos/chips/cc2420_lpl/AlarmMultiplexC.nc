@@ -35,7 +35,7 @@
  * events are for them.
  *
  * @author Jonathan Hui <jhui@archrock.com>
- * @version $Revision: 1.3 $ $Date: 2006-11-07 19:30:52 $
+ * @version $Revision: 1.1.2.1 $ $Date: 2006-10-24 20:37:34 $
  */
 
 #include <Timer.h>

@@ -1,4 +1,4 @@
-// $Id: Tda5250ActiveMessageC.nc,v 1.3 2006-11-07 19:31:15 scipio Exp $
+// $Id: Tda5250ActiveMessageC.nc,v 1.1.2.7 2006-05-31 16:32:43 phihup Exp $
 
 /*                                                                      tab:4
  * "Copyright (c) 2004-2005 The Regents of the University  of California.
@@ -31,7 +31,7 @@
 /*
  *
  * Authors:             Philip Levis
- * Date last modified:  $Id: Tda5250ActiveMessageC.nc,v 1.3 2006-11-07 19:31:15 scipio Exp $
+ * Date last modified:  $Id: Tda5250ActiveMessageC.nc,v 1.1.2.7 2006-05-31 16:32:43 phihup Exp $
  *
  */
 

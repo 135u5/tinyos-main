@@ -1,4 +1,4 @@
-// $Id: HilTimerMilliC.nc,v 1.3 2006-11-07 19:31:21 scipio Exp $
+// $Id: HilTimerMilliC.nc,v 1.1.2.1 2006-01-18 22:53:53 scipio Exp $
 /*
  * "Copyright (c) 2005 Stanford University. All rights reserved.
  *

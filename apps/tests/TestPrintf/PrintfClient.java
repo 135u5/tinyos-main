@@ -22,8 +22,8 @@
 
 /**
  * @author Kevin Klues (klueska@cs.wustl.edu)
- * @version $Revision: 1.3 $
- * @date $Date: 2006-11-07 19:30:35 $
+ * @version $Revision: 1.1.2.1 $
+ * @date $Date: 2006-10-23 23:10:45 $
  */
 
 import java.io.IOException;

@@ -1,4 +1,4 @@
-/* $Id: IM2CC2420SpiP.nc,v 1.3 2006-11-07 19:31:24 scipio Exp $ */
+/* $Id: IM2CC2420SpiP.nc,v 1.1.2.7 2006-08-16 18:30:35 philipb Exp $ */
 /*
  * Copyright (c) 2005 Arched Rock Corporation 
  * All rights reserved. 

@@ -1,4 +1,4 @@
-// $Id: ConfigStorageP.nc,v 1.3 2006-11-07 19:30:43 scipio Exp $
+// $Id: ConfigStorageP.nc,v 1.1.2.9 2006-09-21 23:03:10 idgay Exp $
 
 /*									tab:4
  * Copyright (c) 2002-2006 Intel Corporation

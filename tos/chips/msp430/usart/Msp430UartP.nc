@@ -32,7 +32,7 @@
 /**
  * @author Jonathan Hui <jhui@archrock.com>
  * @author Vlado Handziski <handzisk@tkn.tu-berlin.de>
- * @version $Revision: 1.3 $ $Date: 2006-11-07 19:31:09 $
+ * @version $Revision: 1.1.2.12 $ $Date: 2006-11-02 18:11:27 $
  */
 
 #include<Timer.h>

@@ -3,7 +3,7 @@
  *
  * 
  * @author Kyle Jamieson
- * @version $Id: TestCollectionAppC.nc,v 1.3 2006-11-07 19:30:35 scipio Exp $
+ * @version $Id: TestCollectionAppC.nc,v 1.1.2.1 2006-05-16 17:48:21 kasj78 Exp $
  * @see Net2-WG
  */
 

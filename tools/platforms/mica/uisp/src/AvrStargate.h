@@ -1,7 +1,7 @@
-// $Id: AvrStargate.h,v 1.3 2006-11-07 19:30:42 scipio Exp $
+// $Id: AvrStargate.h,v 1.1.2.1 2005-07-26 17:11:17 idgay Exp $
 
 /*
- * $Id: AvrStargate.h,v 1.3 2006-11-07 19:30:42 scipio Exp $
+ * $Id: AvrStargate.h,v 1.1.2.1 2005-07-26 17:11:17 idgay Exp $
  *
  ****************************************************************************
  *

@@ -1,4 +1,4 @@
-// $Id: SerialByteSource.java,v 1.3 2006-11-07 19:30:41 scipio Exp $
+// $Id: SerialByteSource.java,v 1.1.2.2 2005-07-26 20:56:23 idgay Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2003 The Regents of the University  of California.  

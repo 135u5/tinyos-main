@@ -1,4 +1,4 @@
-/* $Id: CtpPacket.nc,v 1.3 2006-11-07 19:31:19 scipio Exp $ */
+/* $Id: CtpPacket.nc,v 1.1.2.4 2006-09-08 21:51:55 kasj78 Exp $ */
 /*
  * Copyright (c) 2006 Stanford University.
  * All rights reserved.
@@ -35,7 +35,7 @@
  *
  *  @author Philip Levis
  *  @author Kyle Jamieson
- *  @date   $Date: 2006-11-07 19:31:19 $
+ *  @date   $Date: 2006-09-08 21:51:55 $
  */
 
 #include <AM.h>

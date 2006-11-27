@@ -1,4 +1,4 @@
-/* $Id: CtpRoutingPacket.nc,v 1.3 2006-11-07 19:31:19 scipio Exp $ */
+/* $Id: CtpRoutingPacket.nc,v 1.1.2.3 2006-10-27 18:05:03 rfonseca76 Exp $ */
 /*
  * Copyright (c) 2006 Stanford University.
  * All rights reserved.
@@ -35,7 +35,7 @@
  *
  *  @author Philip Levis
  *  @author Kyle Jamieson
- *  @date   $Date: 2006-11-07 19:31:19 $
+ *  @date   $Date: 2006-10-27 18:05:03 $
  */
 
 #include <AM.h>

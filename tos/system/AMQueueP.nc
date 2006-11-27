@@ -1,4 +1,4 @@
-// $Id: AMQueueP.nc,v 1.3 2006-11-07 19:31:28 scipio Exp $
+// $Id: AMQueueP.nc,v 1.1.2.4 2006-06-20 00:31:42 scipio Exp $
 /*
  * "Copyright (c) 2005 Stanford University. All rights reserved.
  *

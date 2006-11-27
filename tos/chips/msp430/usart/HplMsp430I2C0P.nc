@@ -31,7 +31,7 @@
 
 /**
  * @author Jonathan Hui <jhui@archrock.com>
- * @version $Revision: 1.3 $ $Date: 2006-11-07 19:31:08 $
+ * @version $Revision: 1.1.2.3 $ $Date: 2006-10-13 20:46:30 $
  */
 
 module HplMsp430I2C0P {

@@ -57,8 +57,8 @@
  * <br>
  *
  * @author Kevin Klues <klues@tkn.tu-berlin.de>
- * @version  $Revision: 1.3 $
- * @date $Date: 2006-11-07 19:30:35 $
+ * @version  $Revision: 1.1.2.2 $
+ * @date $Date: 2006-10-30 17:05:44 $
  */
 
 module TestRoundRobinArbiterC {

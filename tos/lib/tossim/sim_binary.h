@@ -30,7 +30,7 @@
  */
 
 
-// $Id: sim_binary.h,v 1.3 2006-11-07 19:31:21 scipio Exp $
+// $Id: sim_binary.h,v 1.1.2.1 2005-12-19 23:51:20 scipio Exp $
 
 
 

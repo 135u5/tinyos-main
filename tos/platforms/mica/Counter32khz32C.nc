@@ -1,4 +1,4 @@
-// $Id: Counter32khz32C.nc,v 1.3 2006-11-07 19:31:24 scipio Exp $
+// $Id: Counter32khz32C.nc,v 1.1.2.5 2006-06-12 19:11:01 idgay Exp $
 /*
  * Copyright (c) 2005-2006 Intel Corporation
  * All rights reserved.

@@ -32,7 +32,7 @@
 /**
  * 
  * @author Phil Buonadonna <pbuonadonna@archrock.com>
- * @version $Revision: 1.3 $ $Date: 2006-11-07 19:31:24 $
+ * @version $Revision: 1.1.2.3 $ $Date: 2006-08-15 11:59:09 $
  */
 
 configuration DS2745InternalC {

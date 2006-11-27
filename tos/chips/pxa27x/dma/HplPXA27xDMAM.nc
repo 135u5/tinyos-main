@@ -1,4 +1,4 @@
-/* $Id: HplPXA27xDMAM.nc,v 1.3 2006-11-07 19:31:10 scipio Exp $ */
+/* $Id: HplPXA27xDMAM.nc,v 1.1.2.2 2005-12-30 19:55:24 philipb Exp $ */
 /*
  * Copyright (c) 2005 Arched Rock Corporation 
  * All rights reserved. 

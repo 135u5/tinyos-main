@@ -31,7 +31,7 @@
 
 /**
  * @author Jonathan Hui <jhui@archrock.com>
- * @version $Revision: 1.3 $ $Date: 2006-11-07 19:30:50 $
+ * @version $Revision: 1.1.2.12 $ $Date: 2006-07-17 05:04:16 $
  */
 
 module CC2420CsmaP {

@@ -37,7 +37,7 @@
  * @author Vlado Handziski (handzisk@tkn.tu-berlin.de)
  * @author Jan Hauer (hauer@tkn.tu-berlin.de)
  * @author Joe Polastre
- * @version $Revision: 1.3 $ $Date: 2006-11-07 19:31:09 $
+ * @version $Revision: 1.1.2.6 $ $Date: 2006-08-30 17:15:55 $
  */
 
 #include "msp430usart.h"

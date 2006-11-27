@@ -1,4 +1,4 @@
-// $Id: HplAt45dbIOP.nc,v 1.3 2006-11-07 19:31:25 scipio Exp $
+// $Id: HplAt45dbIOP.nc,v 1.1.2.3 2006-10-26 15:36:10 idgay Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2003 The Regents of the University  of California.  

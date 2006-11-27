@@ -1,4 +1,4 @@
-// $Id: TestADCM.nc,v 1.3 2006-11-07 19:30:37 scipio Exp $
+// $Id: TestADCM.nc,v 1.1.1.1 2005-11-05 16:38:03 kristinwright Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2005 The Regents of the University  of California.  

@@ -1,4 +1,4 @@
-/* $Id: TMP175InternalC.nc,v 1.3 2006-11-07 19:31:27 scipio Exp $ */
+/* $Id: TMP175InternalC.nc,v 1.1.2.3 2006-08-15 11:59:09 klueska Exp $ */
 /*
  * Copyright (c) 2005 Arch Rock Corporation 
  * All rights reserved. 

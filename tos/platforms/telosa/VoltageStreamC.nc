@@ -1,5 +1,5 @@
-/**
- * Copyright (c) 2005-2006 Arched Rock Corporation
+/*
+ * Copyright (c) 2005-2006 Arch Rock Corporation
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -11,7 +11,7 @@
  *   notice, this list of conditions and the following disclaimer in the
  *   documentation and/or other materials provided with the
  *   distribution.
- * - Neither the name of the Arched Rock Corporation nor the names of
+ * - Neither the name of the Arch Rock Corporation nor the names of
  *   its contributors may be used to endorse or promote products derived
  *   from this software without specific prior written permission.
  *
@@ -30,24 +30,21 @@
  */
 
 /**
- * Implementation of the block storage abstraction for the pxa271
- * embedded flash.
+ * VoltageC is a common name for the Msp430InternalVoltageC voltage
+ * sensor available on the telosb platform.
  *
- * @author Philip Buonadonna
- * @version $Revision: 1.2 $ $Date: 2006-07-12 17:02:49 $
+ * To convert from ADC counts to actual voltage, divide by 4096 and
+ * multiply by 3.
+ *
+ * @author Gilman Tolle <gtolle@archrock.com>
+ * @version $Revision: 1.1.2.1 $ $Date: 2006-11-17 19:02:13 $
  */
 
-generic configuration BlockStorageC( volume_id_t volume_id ) {
-
-  provides interface BlockRead;
-  provides interface BlockWrite;
+generic configuration VoltageStreamC() {
+  provides interface ReadStream<uint16_t>;
 }
-
 implementation {
-
-  enum {
-    BLOCK_ID = unique( "pxa271p30.Block" ),
-    VOLUME_ID = unique( "pxa27xp30.Volume" ),
-  };
-
+  components new Msp430InternalVoltageC();
+  ReadStream = Msp430InternalVoltageC.ReadStream;
 }
+

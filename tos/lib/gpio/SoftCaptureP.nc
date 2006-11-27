@@ -1,4 +1,4 @@
-// $Id: SoftCaptureP.nc,v 1.3 2006-11-07 19:31:18 scipio Exp $
+// $Id: SoftCaptureP.nc,v 1.1.2.1 2005-12-09 21:04:48 philipb Exp $
 
 /*									tab:4
  *  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.  By
