@@ -1,4 +1,4 @@
-/* $Id: CC1000Control.nc,v 1.3 2006-11-07 19:30:49 scipio Exp $
+/* $Id: CC1000Control.nc,v 1.1.2.1 2006-10-30 01:44:34 idgay Exp $
  * "Copyright (c) 2000-2005 The Regents of the University  of California.  
  * All rights reserved.
  *

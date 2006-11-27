@@ -1,4 +1,4 @@
-// $Id: StreamByteSource.java,v 1.3 2006-11-07 19:30:41 scipio Exp $
+// $Id: StreamByteSource.java,v 1.1.2.2 2005-10-31 20:13:43 scipio Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2003 The Regents of the University  of California.  

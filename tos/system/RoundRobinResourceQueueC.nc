@@ -23,8 +23,8 @@
 /**
  *
  * @author Kevin Klues (klueska@cs.wustl.edu)
- * @version $Revision: 1.3 $
- * @date $Date: 2006-11-07 19:31:28 $
+ * @version $Revision: 1.1.2.3 $
+ * @date $Date: 2006-10-23 05:45:49 $
  */
  
 #include "Resource.h"

@@ -1,4 +1,4 @@
-/* $Id: WireAdcP.nc,v 1.3 2006-11-07 19:30:44 scipio Exp $
+/* $Id: WireAdcP.nc,v 1.1.2.1 2006-01-27 19:35:31 idgay Exp $
  * Copyright (c) 2005 Intel Corporation
  * All rights reserved.
  *

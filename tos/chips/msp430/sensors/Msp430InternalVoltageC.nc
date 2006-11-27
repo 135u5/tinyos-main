@@ -37,7 +37,7 @@
  * multiply by 3.
  *
  * @author Gilman Tolle <gtolle@archrock.com>
- * @version $Revision: 1.3 $ $Date: 2006-11-07 19:31:02 $
+ * @version $Revision: 1.1.2.5 $ $Date: 2006-10-09 13:26:37 $
  */
 
 generic configuration Msp430InternalVoltageC() {

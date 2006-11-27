@@ -1,6 +1,7 @@
-/* $Id: LinkSrcPacket.nc,v 1.2 2006-07-12 17:02:25 scipio Exp $ */
-/*
- * "Copyright (c) 2005 The Regents of the University  of California.  
+// $Id: HplAt45db_chip.h,v 1.1.2.1 2006-11-16 21:03:05 vlahan Exp $
+
+/*									tab:4
+ * "Copyright (c) 2000-2003 The Regents of the University  of California.  
  * All rights reserved.
  *
  * Permission to use, copy, modify, and distribute this software and its
@@ -19,17 +20,26 @@
  * ON AN "AS IS" BASIS, AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATION TO
  * PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS."
  *
+ * Copyright (c) 2002-2006 Intel Corporation
+ * All rights reserved.
+ *
+ * This file is distributed under the terms in the attached INTEL-LICENSE     
+ * file. If you do not find these files, copies can be found by writing to
+ * Intel Research Berkeley, 2150 Shattuck Avenue, Suite 1300, Berkeley, CA, 
+ * 94704.  Attention:  Intel License Inquiry.
  */
 
-/*
- *  @author Rodrigo Fonseca
- *  Based on MintRoute, by Philip Buonadonna, Alec Woo, Terence Tong, Crossbow
- *  @date   $Date: 2006-07-12 17:02:25 $
- */
+#ifndef HPLAT45DB_CHIP_H
+#define HPLAT45DB_CHIP_H
 
-// Om: added the keyword "command"
+// flash characteristics
+enum {
+  AT45_MAX_PAGES = 2048,
+  AT45_PAGE_SIZE = 264,
+  AT45_PAGE_SIZE_LOG2 = 8 // For those who want to ignore the last 8 bytes
+};
 
-interface LinkSrcPacket {
-    /** Returns the am_addr of the link this message came from */
-    command am_addr_t getSrc(message_t* msg);
-}
+typedef uint16_t at45page_t;
+typedef uint16_t at45pageoffset_t; /* must fit 0 to AT45_PAGE_SIZE - 1 */
+
+#endif

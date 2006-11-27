@@ -34,7 +34,7 @@
  * TI MSP430.
  *
  * @author Jonathan Hui <jhui@archrock.com>
- * @version $Revision: 1.3 $ $Date: 2006-11-07 19:31:27 $
+ * @version $Revision: 1.1.2.6 $ $Date: 2006-06-20 18:56:07 $
  */
 
 configuration HplStm25pSpiC {

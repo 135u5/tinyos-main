@@ -1,4 +1,4 @@
-// $Id: TrickleTimerMilliC.nc,v 1.3 2006-11-07 19:31:18 scipio Exp $
+// $Id: TrickleTimerMilliC.nc,v 1.1.2.3 2006-03-02 19:24:27 gtolle Exp $
 /*
  * "Copyright (c) 2006 Stanford University. All rights reserved.
  *

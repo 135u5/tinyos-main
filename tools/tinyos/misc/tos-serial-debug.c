@@ -1,4 +1,4 @@
-// $Id: tos-serial-debug.c,v 1.3 2006-11-07 19:30:43 scipio Exp $
+// $Id: tos-serial-debug.c,v 1.1.2.3 2006-11-05 18:09:53 scipio Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2003 The Regents of the University  of California.  

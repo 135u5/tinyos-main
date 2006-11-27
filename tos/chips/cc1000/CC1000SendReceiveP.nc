@@ -1,4 +1,4 @@
-// $Id: CC1000SendReceiveP.nc,v 1.4 2006-11-07 19:30:45 scipio Exp $
+// $Id: CC1000SendReceiveP.nc,v 1.1.2.19 2006-10-26 17:41:55 idgay Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2005 The Regents of the University  of California.  

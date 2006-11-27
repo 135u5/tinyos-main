@@ -1,4 +1,4 @@
-/* $Id: HalMAX136xAdvanced.nc,v 1.3 2006-11-07 19:30:54 scipio Exp $ */
+/* $Id: HalMAX136xAdvanced.nc,v 1.1.2.1 2006-07-06 23:20:52 philipb Exp $ */
 /*
  * Copyright (c) 2005 Arch Rock Corporation 
  * All rights reserved. 

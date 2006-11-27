@@ -33,8 +33,8 @@
  * intended use.<br><br>
  *
  * @author Kevin Klues (klues@tkn.tu-berlin.edu)
- * @version $Revision: 1.3 $
- * @date $Date: 2006-11-07 19:31:17 $ 
+ * @version $Revision: 1.1.2.4 $
+ * @date $Date: 2006-08-15 11:50:42 $ 
  */
 
 interface ResourceController {

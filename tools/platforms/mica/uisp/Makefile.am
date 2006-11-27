@@ -1,5 +1,5 @@
 #
-# $Id: Makefile.am,v 1.3 2006-11-07 19:30:41 scipio Exp $
+# $Id: Makefile.am,v 1.1.2.2 2005-08-26 18:50:40 idgay Exp $
 #
 # uisp - The Micro In-System Programmer for Atmel AVR microcontrollers.
 # Copyright (C) 2002  Theodore A. Roth

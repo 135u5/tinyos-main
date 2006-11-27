@@ -34,7 +34,7 @@
  * Light-to-Digital converters.
  *
  * @author Phil Buonadonna <pbuonadonna@archrock.com>
- * @version $Revision: 1.3 $ $Date: 2006-11-07 19:31:16 $
+ * @version $Revision: 1.1.2.2 $ $Date: 2006-07-06 23:19:48 $
  */
 
 interface HplTSL256x {

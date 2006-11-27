@@ -1,4 +1,4 @@
-// $Id: BlinkC.nc,v 1.3 2006-11-07 19:30:34 scipio Exp $
+// $Id: BlinkC.nc,v 1.1.2.9 2006-02-16 16:48:07 idgay Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2005 The Regents of the University  of California.  

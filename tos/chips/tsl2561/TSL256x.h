@@ -33,7 +33,7 @@
  * Types and definitions for the Taos TSL256x sensor
  *
  * @author Phil Buonadonna <pbuonadonna@archrock.com>
- * @version $Revision: 1.3 $ $Date: 2006-11-07 19:31:16 $
+ * @version $Revision: 1.1.2.1 $ $Date: 2006-05-25 22:55:48 $
  */
 
 #ifndef _TSL256X_H

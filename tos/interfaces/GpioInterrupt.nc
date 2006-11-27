@@ -1,4 +1,4 @@
-// $Id: GpioInterrupt.nc,v 1.3 2006-11-07 19:31:17 scipio Exp $
+// $Id: GpioInterrupt.nc,v 1.1.2.3 2005-11-10 00:57:22 philipb Exp $
 /*
  * "Copyright (c) 2000-2005 The Regents of the University  of California.
  * All rights reserved.
@@ -23,7 +23,7 @@
 /**
  * @author Jonathan Hui
  * @author Joe Polastre
- * Revision:  $Revision: 1.3 $
+ * Revision:  $Revision: 1.1.2.3 $
  *
  * Provides a microcontroller-independent presentation of interrupts
  */

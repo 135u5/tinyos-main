@@ -1,4 +1,4 @@
-/// $Id: Atm128SpiP.nc,v 1.3 2006-11-07 19:30:45 scipio Exp $
+/// $Id: Atm128SpiP.nc,v 1.1.2.10 2006-09-28 19:26:21 jwhui Exp $
 
 /*
  * "Copyright (c) 2005 Stanford University. All rights reserved.
@@ -63,7 +63,7 @@
  *
  *
  * <pre>
- *  $Id: Atm128SpiP.nc,v 1.3 2006-11-07 19:30:45 scipio Exp $
+ *  $Id: Atm128SpiP.nc,v 1.1.2.10 2006-09-28 19:26:21 jwhui Exp $
  * </pre>
  *
  * @author Philip Levis

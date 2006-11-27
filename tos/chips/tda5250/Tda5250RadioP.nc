@@ -27,8 +27,8 @@
 * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *
 * - Revision -------------------------------------------------------------
-* $Revision: 1.3 $
-* $Date: 2006-11-07 19:31:15 $
+* $Revision: 1.1.2.10 $
+* $Date: 2006-08-15 13:54:06 $
 * @author: Kevin Klues (klues@tkn.tu-berlin.de)
 * ========================================================================
 */

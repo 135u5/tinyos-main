@@ -1,4 +1,4 @@
-// $Id: BlinkM.nc,v 1.3 2006-11-07 19:30:37 scipio Exp $
+// $Id: BlinkM.nc,v 1.1.1.1 2005-11-05 16:38:04 kristinwright Exp $
 
 /**
  * Copyright (c) 2004-2005 Crossbow Technology, Inc.  All rights reserved.

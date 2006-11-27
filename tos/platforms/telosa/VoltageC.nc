@@ -1,5 +1,5 @@
-/**
- * Copyright (c) 2005-2006 Arched Rock Corporation
+/*
+ * Copyright (c) 2005-2006 Arch Rock Corporation
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -11,7 +11,7 @@
  *   notice, this list of conditions and the following disclaimer in the
  *   documentation and/or other materials provided with the
  *   distribution.
- * - Neither the name of the Arched Rock Corporation nor the names of
+ * - Neither the name of the Arch Rock Corporation nor the names of
  *   its contributors may be used to endorse or promote products derived
  *   from this software without specific prior written permission.
  *
@@ -27,17 +27,24 @@
  * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE
- *
- * @author Phil Buonadonna
- * @version $Revision: 1.2 $ $Date: 2006-07-12 17:02:49 $
  */
 
-#ifndef __STORAGE_CHIP_H__
-#define __STORAGE_CHIP_H__
+/**
+ * VoltageC is a common name for the Msp430InternalVoltageC voltage
+ * sensor available on the telosb platform.
+ *
+ * To convert from ADC counts to actual voltage, divide by 4096 and
+ * multiply by 3.
+ *
+ * @author Gilman Tolle <gtolle@archrock.com>
+ * @version $Revision: 1.1.2.1 $ $Date: 2006-11-17 19:02:13 $
+ */
 
-typedef uint8_t storage_volume_t;
-typedef uint8_t storage_block_t;
-typedef uint8_t storage_log_t;
-typedef storage_addr_t storage_cookie_t;
+generic configuration VoltageC() {
+  provides interface Read<uint16_t>;
+}
+implementation {
+  components new Msp430InternalVoltageC();
+  Read = Msp430InternalVoltageC.Read;
+}
 
-#endif

@@ -1,4 +1,4 @@
-/// $Id: TempP.nc,v 1.3 2006-11-07 19:31:25 scipio Exp $
+/// $Id: TempP.nc,v 1.1.2.3 2006-06-20 17:14:29 idgay Exp $
 
 /*
  * Copyright (c) 2004-2005 Crossbow Technology, Inc.  All rights reserved.

@@ -1,4 +1,4 @@
-// $Id: Atm128Interrupt.h,v 1.3 2006-11-07 19:30:44 scipio Exp $
+// $Id: Atm128Interrupt.h,v 1.1.2.3 2006-01-27 23:13:22 idgay Exp $
 
 /*
  * Copyright (c) 2004-2005 Crossbow Technology, Inc.  All rights reserved.

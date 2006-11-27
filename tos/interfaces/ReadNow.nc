@@ -45,7 +45,7 @@
  * @param val_t the type of the object that will be returned
  *
  * @author Gilman Tolle <gtolle@archrock.com>
- * @version $Revision: 1.3 $ $Date: 2006-11-07 19:31:17 $
+ * @version $Revision: 1.1.2.3 $ $Date: 2006-06-20 18:56:06 $
  */
 
 interface ReadNow<val_t> {

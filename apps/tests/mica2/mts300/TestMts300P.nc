@@ -24,7 +24,7 @@
  *
  *  @author Martin Turon <mturon@xbow.com>
  *
- *  $Id: TestMts300P.nc,v 1.3 2006-11-07 19:30:37 scipio Exp $
+ *  $Id: TestMts300P.nc,v 1.1.1.1.2.1 2006-02-16 16:48:12 idgay Exp $
  */
 
 #include "Timer.h"

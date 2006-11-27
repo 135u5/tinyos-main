@@ -1,4 +1,4 @@
-//$Id: VirtualizeAlarmC.nc,v 1.4 2006-11-07 19:31:21 scipio Exp $
+//$Id: VirtualizeAlarmC.nc,v 1.1.2.8 2006-07-26 21:19:34 cssharp Exp $
 
 /* "Copyright (c) 2000-2003 The Regents of the University of California.  
  * All rights reserved.
