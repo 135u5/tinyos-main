@@ -53,7 +53,7 @@
 /**
  * @author Ben Greenstein <ben@cs.ucla.edu>
  * @author Jonathan Hui <jhui@archrock.com>
- * @version $Revision: 1.3 $ $Date: 2006-11-07 19:30:57 $
+ * @version $Revision: 1.1.2.4 $ $Date: 2006-11-07 23:15:04 $
  */
 
 configuration HplMsp430DmaC {

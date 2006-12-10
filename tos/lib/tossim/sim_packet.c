@@ -30,7 +30,7 @@
  * @date   Jan 2 2006
  */
 
-// $Id: sim_packet.c,v 1.3 2006-11-07 19:31:21 scipio Exp $
+// $Id: sim_packet.c,v 1.1.2.5 2006-11-07 23:15:13 scipio Exp $
 
 #include <sim_packet.h>
 #include <message.h>

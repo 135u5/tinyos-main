@@ -31,8 +31,8 @@
  * Management policies.
  *
  * @author Kevin Klues <klueska@cs.wustl.edu>
- * @version  $Revision: 1.3 $
- * @date $Date: 2006-11-07 19:30:35 $ 
+ * @version  $Revision: 1.1.2.6 $
+ * @date $Date: 2006-11-07 23:14:51 $ 
  */
  
 #include "Timer.h"

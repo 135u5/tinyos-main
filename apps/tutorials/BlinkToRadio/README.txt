@@ -1,4 +1,4 @@
-$Id: README.txt,v 1.3 2006-11-07 19:30:37 scipio Exp $
+$Id: README.txt,v 1.1.2.2 2006-11-07 23:14:54 scipio Exp $
 
 README for Blink
 

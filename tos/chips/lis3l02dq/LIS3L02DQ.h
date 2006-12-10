@@ -33,7 +33,7 @@
  * Types and definitions for the ST LIS3L02DQ 3-axis Accelerometer
  *
  * @author Phil Buonadonna <pbuonadonna@archrock.com>
- * @version $Revision: 1.3 $ $Date: 2006-11-07 19:30:54 $
+ * @version $Revision: 1.1.2.4 $ $Date: 2006-11-07 23:15:03 $
  */
 
 #ifndef _LIS3L02DQ_H

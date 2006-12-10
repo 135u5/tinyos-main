@@ -1,4 +1,4 @@
-// $Id: BlinkTaskAppC.nc,v 1.3 2006-11-07 19:30:37 scipio Exp $
+// $Id: BlinkTaskAppC.nc,v 1.1.2.3 2006-11-07 23:14:53 scipio Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2005 The Regents of the University  of California.  

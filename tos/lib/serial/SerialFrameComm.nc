@@ -1,4 +1,4 @@
-//$Id: SerialFrameComm.nc,v 1.3 2006-11-07 19:31:20 scipio Exp $
+//$Id: SerialFrameComm.nc,v 1.1.2.7 2006-11-07 23:15:12 scipio Exp $
 
 /* "Copyright (c) 2005 The Regents of the University of California.  
  * All rights reserved.

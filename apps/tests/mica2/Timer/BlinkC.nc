@@ -1,4 +1,4 @@
-// $Id: BlinkC.nc,v 1.3 2006-11-07 19:30:37 scipio Exp $
+// $Id: BlinkC.nc,v 1.1.1.1.2.2 2006-11-07 23:14:53 scipio Exp $
 
 /**
  * Copyright (c) 2004-2005 Crossbow Technology, Inc.  All rights reserved.

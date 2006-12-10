@@ -31,7 +31,7 @@
 
 /**
  * @author Jonathan Hui <jhui@archrock.com>
- * @version $Revision: 1.3 $ $Date: 2006-11-07 19:30:52 $
+ * @version $Revision: 1.1.2.2 $ $Date: 2006-11-07 23:15:02 $
  */
 
 #include "Timer.h"

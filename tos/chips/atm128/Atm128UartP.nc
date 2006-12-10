@@ -32,7 +32,7 @@
 /**
  * @author Alec Woo <awoo@archrock.com>
  * @author Jonathan Hui <jhui@archrock.com>
- * @version $Revision: 1.3 $ $Date: 2006-11-07 19:30:43 $
+ * @version $Revision: 1.1.2.4 $ $Date: 2006-11-07 23:14:59 $
  */
 
 #include <Timer.h>

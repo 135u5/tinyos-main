@@ -1,4 +1,4 @@
-/* $Id: atm128const.h,v 1.3 2006-11-07 19:30:44 scipio Exp $
+/* $Id: atm128const.h,v 1.1.2.3 2006-11-07 23:15:00 scipio Exp $
  * Copyright (c) 2005 Intel Corporation
  * All rights reserved.
  *

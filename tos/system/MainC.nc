@@ -1,4 +1,4 @@
-// $Id: MainC.nc,v 1.3 2006-11-07 19:31:28 scipio Exp $
+// $Id: MainC.nc,v 1.1.2.6 2006-11-07 23:15:26 scipio Exp $
 
 /*                                                                      tab:4
  * "Copyright (c) 2000-2003 The Regents of the University  of California.  
@@ -28,7 +28,7 @@
  * Intel Research Berkeley, 2150 Shattuck Avenue, Suite 1300, Berkeley, CA, 
  * 94704.  Attention:  Intel License Inquiry.
  *
- * Date last modified:  $Id: MainC.nc,v 1.3 2006-11-07 19:31:28 scipio Exp $
+ * Date last modified:  $Id: MainC.nc,v 1.1.2.6 2006-11-07 23:15:26 scipio Exp $
  */
 
 /**

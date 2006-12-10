@@ -1,4 +1,4 @@
-// $Id: HplCC1000InitP.nc,v 1.3 2006-11-07 19:31:25 scipio Exp $
+// $Id: HplCC1000InitP.nc,v 1.1.2.4 2006-11-07 23:15:16 scipio Exp $
 /*									tab:4
  * "Copyright (c) 2004-2005 The Regents of the University  of California.  
  * All rights reserved.

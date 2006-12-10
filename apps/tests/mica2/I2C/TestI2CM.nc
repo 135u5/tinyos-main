@@ -24,7 +24,7 @@
  *
  *  @author Martin Turon <mturon@xbow.com>
  *
- *  $Id: TestI2CM.nc,v 1.3 2006-11-07 19:30:37 scipio Exp $
+ *  $Id: TestI2CM.nc,v 1.1.1.1.2.3 2006-11-07 23:14:53 scipio Exp $
  */
 
 /**

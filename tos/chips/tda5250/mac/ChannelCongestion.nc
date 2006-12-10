@@ -1,5 +1,5 @@
-/*
- * Copyright (c) 2004-2006, Technische Universitaet Berlin
+/* -*- mode:c++; indent-tabs-mode: nil -*-
+ * Copyright (c) 2006, Technische Universitaet Berlin
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -25,28 +25,18 @@
  * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
-
-/**
- * Interface used by Msp430Uart clients to control/configure the Uart.
  *
- * @author Philipp Huppertz (huppertz@tkn.tu-berlin.de)
  */
-interface Msp430UartControl {
-
-  /**
-  * Sets the Uart to Rx mode.
-  */
-  async command void setModeRx();
-  
-  /**
-  * Sets the Uart to Tx mode.
-  */
-  async command void setModeTx();
-  
-  /**
-  * Sets the Uart to duplex mode.
-  */
-  async command void setModeDuplex();
-  
+ 
+/**
+ * Interface of MAC to inform any interested party on current congestion state
+ * in radio neighborhood.
+ * @author Andreas Koepke (koepke at tkn.tu-berlin.de)
+ */ 
+interface ChannelCongestion {
+    /**
+     * signal current congestion level. There are 5 levels, 0 means no
+     * congestion, 5 means high congestion
+     */
+    async event void congestionEvent(uint8_t level);
 }

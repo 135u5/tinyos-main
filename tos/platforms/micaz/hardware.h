@@ -35,7 +35,7 @@
  *  @author Matt Miller <mmiller@xbow.com>
  *  @author Martin Turon <mturon@xbow.com>
  *
- *  $Id: hardware.h,v 1.4 2006-11-07 19:31:26 scipio Exp $
+ *  $Id: hardware.h,v 1.1.2.12 2006-11-07 23:15:24 scipio Exp $
  */
 
 #ifndef HARDWARE_H

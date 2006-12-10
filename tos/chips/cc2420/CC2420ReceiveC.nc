@@ -33,7 +33,7 @@
  * Implementation of the receive path for the ChipCon CC2420 radio.
  *
  * @author Jonathan Hui <jhui@archrock.com>
- * @version $Revision: 1.3 $ $Date: 2006-11-07 19:30:50 $
+ * @version $Revision: 1.1.2.6 $ $Date: 2006-11-07 23:15:01 $
  */
 
 configuration CC2420ReceiveC {

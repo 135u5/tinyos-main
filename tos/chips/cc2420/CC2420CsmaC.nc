@@ -33,7 +33,7 @@
  * Basic implementation of a CSMA MAC for the ChipCon CC2420 radio.
  *
  * @author Jonathan Hui <jhui@archrock.com>
- * @version $Revision: 1.3 $ $Date: 2006-11-07 19:30:50 $
+ * @version $Revision: 1.1.2.12 $ $Date: 2006-11-07 23:15:01 $
  */
 
 #include "CC2420.h"

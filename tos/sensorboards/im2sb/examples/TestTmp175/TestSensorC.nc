@@ -1,5 +1,5 @@
-/**
- * Copyright (c) 2005-2006 Arched Rock Corporation
+/*
+ * Copyright (c) 2005-2006 Arch Rock Corporation
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -11,7 +11,7 @@
  *   notice, this list of conditions and the following disclaimer in the
  *   documentation and/or other materials provided with the
  *   distribution.
- * - Neither the name of the Arched Rock Corporation nor the names of
+ * - Neither the name of the Arch Rock Corporation nor the names of
  *   its contributors may be used to endorse or promote products derived
  *   from this software without specific prior written permission.
  *
@@ -27,17 +27,33 @@
  * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE
- *
- * @author Phil Buonadonna
- * @version $Revision: 1.2 $ $Date: 2006-07-12 17:02:49 $
  */
 
-#ifndef __STORAGE_CHIP_H__
-#define __STORAGE_CHIP_H__
+/**
+ * Demo application of the TI TMP175. Originally developed for the
+ * Intel Mote 2 sensorboard.
+ *
+ * @author Kaisen Lin
+ * @author Philip Buonadonna
+ */
 
-typedef uint8_t storage_volume_t;
-typedef uint8_t storage_block_t;
-typedef uint8_t storage_log_t;
-typedef storage_addr_t storage_cookie_t;
+configuration TestSensorC{}
+implementation {
+  components MainC, TestSensorM, LedsC;
+  components new TMP175C() as Sensor;
 
-#endif
+  MainC.Boot <- TestSensorM;
+  TestSensorM.Leds -> LedsC;
+
+  TestSensorM.Temperature -> Sensor;
+  TestSensorM.SubControl -> Sensor.SplitControl;
+  TestSensorM.HalTMP175Advanced -> Sensor;
+
+  components new TimerMilliC() as Timer0;
+  TestSensorM.Timer0 -> Timer0;
+
+  components SerialActiveMessageC as AM;
+  TestSensorM.AMSend -> AM.AMSend[AM_TESTSENSORMSG];
+  TestSensorM.Packet -> AM;
+  TestSensorM.SubControl -> AM;
+}

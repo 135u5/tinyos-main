@@ -1,4 +1,4 @@
-/* $Id: PoolC.nc,v 1.3 2006-11-07 19:31:28 scipio Exp $ */
+/* $Id: PoolC.nc,v 1.1.2.3 2006-11-07 23:15:26 scipio Exp $ */
 /*
  * Copyright (c) 2006 Stanford University.
  * All rights reserved.
@@ -35,7 +35,7 @@
  *
  *  @author Philip Levis
  *  @author Geoffrey Mainland
- *  @date   $Date: 2006-11-07 19:31:28 $
+ *  @date   $Date: 2006-11-07 23:15:26 $
  */
 
 generic configuration PoolC(typedef pool_t, uint8_t POOL_SIZE) {

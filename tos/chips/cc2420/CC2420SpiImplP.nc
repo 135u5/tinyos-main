@@ -31,7 +31,7 @@
 
 /**
  * @author Jonathan Hui <jhui@archrock.com>
- * @version $Revision: 1.3 $ $Date: 2006-11-07 19:30:51 $
+ * @version $Revision: 1.1.2.13 $ $Date: 2006-11-07 23:15:02 $
  */
 
 module CC2420SpiImplP {

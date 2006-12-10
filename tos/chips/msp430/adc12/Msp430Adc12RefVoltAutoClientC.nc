@@ -25,7 +25,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * - Revision -------------------------------------------------------------
- * $Revision: 1.2 $ $Date: 2006-07-12 17:01:40 $ @author: Jan Hauer
+ * $Revision: 1.1.2.5 $ $Date: 2006-11-07 23:15:03 $ @author: Jan Hauer
  * <hauer@tkn.tu-berlin.de>
  * ========================================================================
  */

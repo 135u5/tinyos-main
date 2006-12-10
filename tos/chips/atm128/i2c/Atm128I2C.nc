@@ -1,4 +1,4 @@
-/// $Id: Atm128I2C.nc,v 1.3 2006-11-07 19:30:44 scipio Exp $
+/// $Id: Atm128I2C.nc,v 1.1.2.2 2006-11-07 23:14:59 scipio Exp $
 /*
  * Copyright (c) 2006 Stanford University.
  * All rights reserved.
@@ -39,7 +39,7 @@
  *
  * @author Philip Levis
  *
- * @version  $Id: Atm128I2C.nc,v 1.3 2006-11-07 19:30:44 scipio Exp $
+ * @version  $Id: Atm128I2C.nc,v 1.1.2.2 2006-11-07 23:14:59 scipio Exp $
  */
 interface Atm128I2C {
 

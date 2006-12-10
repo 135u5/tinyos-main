@@ -1,4 +1,4 @@
-// $Id: TestSerialP.nc,v 1.3 2006-11-07 19:30:35 scipio Exp $
+// $Id: TestSerialP.nc,v 1.3.2.2 2006-11-07 23:14:52 scipio Exp $
 
 /*									tab:4
  * "Copyright (c) 2000-2005 The Regents of the University  of California.  

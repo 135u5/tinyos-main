@@ -60,7 +60,7 @@
  * @author Ben Greenstein <ben@cs.ucla.edu>
  * @author Jonathan Hui <jhui@archrock.com>
  * @author Joe Polastre <info@moteiv.com>
- * @version $Revision: 1.3 $ $Date: 2006-11-07 19:31:01 $
+ * @version $Revision: 1.1.2.4 $ $Date: 2006-11-07 23:15:04 $
  */
 
 configuration Msp430DmaC {

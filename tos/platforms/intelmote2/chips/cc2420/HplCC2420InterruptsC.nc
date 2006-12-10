@@ -1,4 +1,4 @@
-/* $Id: HplCC2420InterruptsC.nc,v 1.3 2006-11-07 19:31:23 scipio Exp $ */
+/* $Id: HplCC2420InterruptsC.nc,v 1.1.2.2 2006-11-07 23:15:15 scipio Exp $ */
 /*
  * Copyright (c) 2005 Arched Rock Corporation 
  * All rights reserved. 

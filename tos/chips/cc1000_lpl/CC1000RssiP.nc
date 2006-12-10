@@ -1,4 +1,4 @@
-/* $Id: CC1000RssiP.nc,v 1.3 2006-11-07 19:30:49 scipio Exp $
+/* $Id: CC1000RssiP.nc,v 1.1.2.2 2006-11-07 23:15:01 scipio Exp $
  * "Copyright (c) 2000-2005 The Regents of the University  of California.  
  * All rights reserved.
  *

@@ -38,7 +38,7 @@
  * 0.986 from voltage and divide by 0.00355 to get degrees C.
  *
  * @author Gilman Tolle <gtolle@archrock.com>
- * @version $Revision: 1.3 $ $Date: 2006-11-07 19:31:02 $
+ * @version $Revision: 1.1.2.5 $ $Date: 2006-11-07 23:15:04 $
  */
 
 generic configuration Msp430InternalTemperatureC() {

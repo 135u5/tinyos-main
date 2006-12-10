@@ -32,7 +32,7 @@
  * the Intel Xscale PXA27x
  *
  * <pre>
- *  $Id: McuSleepC.nc,v 1.3 2006-11-07 19:31:10 scipio Exp $
+ *  $Id: McuSleepC.nc,v 1.1.2.3 2006-11-07 23:15:08 scipio Exp $
  * </pre>
  *
  * @author Philip Buonadonna

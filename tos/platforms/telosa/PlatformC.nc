@@ -1,4 +1,4 @@
-// $Id: PlatformC.nc,v 1.3 2006-11-07 19:31:26 scipio Exp $
+// $Id: PlatformC.nc,v 1.1.2.6 2006-11-07 23:15:24 scipio Exp $
 
 /* "Copyright (c) 2000-2005 The Regents of the University of California.  
  * All rights reserved.
@@ -22,7 +22,7 @@
 
 /**
  * @author Joe Polastre and Cory Sharp
- * @version $Revision: 1.3 $ $Date: 2006-11-07 19:31:26 $
+ * @version $Revision: 1.1.2.6 $ $Date: 2006-11-07 23:15:24 $
  */
 #include "hardware.h"
 

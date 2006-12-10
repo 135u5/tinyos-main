@@ -1,4 +1,4 @@
-// $Id: At45dbBlockConfig.nc,v 1.3 2006-11-07 19:30:43 scipio Exp $
+// $Id: At45dbBlockConfig.nc,v 1.1.2.4 2006-11-07 23:14:59 scipio Exp $
 
 /*									tab:4
  * Copyright (c) 2002-2006 Intel Corporation
