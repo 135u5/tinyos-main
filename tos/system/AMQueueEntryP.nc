@@ -1,4 +1,4 @@
-// $Id: AMQueueEntryP.nc,v 1.6 2008-06-24 05:32:32 regehr Exp $
+// $Id: AMQueueEntryP.nc,v 1.5 2007-09-13 23:10:19 scipio Exp $
 /*
  * "Copyright (c) 2005 Stanford University. All rights reserved.
  *
@@ -32,7 +32,7 @@
 
 #include "AM.h"
 
-generic module AMQueueEntryP(am_id_t amId) @safe() {
+generic module AMQueueEntryP(am_id_t amId) {
   provides interface AMSend;
   uses{
     interface Send;

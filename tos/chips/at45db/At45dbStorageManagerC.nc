@@ -14,7 +14,7 @@
  * @author: David Gay <dgay@acm.org>
  */
 
-module At45dbStorageManagerC @safe() {
+module At45dbStorageManagerC {
   provides interface At45dbVolume[volume_id_t volid];
 }
 implementation {

@@ -31,10 +31,10 @@
 
 /**
  * @author Jonathan Hui <jhui@archrock.com>
- * @version $Revision: 1.7 $ $Date: 2008-06-24 04:07:28 $
+ * @version $Revision: 1.5 $ $Date: 2008-06-17 07:28:24 $
  */
 
-module CC2420CsmaP @safe() {
+module CC2420CsmaP {
 
   provides interface SplitControl;
   provides interface Send;
@@ -134,7 +134,7 @@ implementation {
       m_msg = p_msg;
     }
 
-    header->length = len + CC2420_SIZE;
+    header->length = len;
     header->fcf &= 1 << IEEE154_FCF_ACK_REQ;
     header->fcf |= ( ( IEEE154_TYPE_DATA << IEEE154_FCF_FRAME_TYPE ) |
 		     ( 1 << IEEE154_FCF_INTRAPAN ) |

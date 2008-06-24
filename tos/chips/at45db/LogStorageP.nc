@@ -38,7 +38,7 @@
  * @author: Jonathan Hui <jwhui@cs.berkeley.edu>
  */
 
-module LogStorageP @safe() {
+module LogStorageP {
   provides {
     interface LogRead[uint8_t logId];
     interface LogWrite[uint8_t logId];
@@ -200,13 +200,13 @@ implementation
   uint8_t metaState;
   bool recordsLost;
   at45page_t firstPage, lastPage;
-  storage_len_t pos;
+  storage_len_t len;
   nx_struct pageinfo metadata;
 
   struct {
     /* The latest request made for this client, and it's arguments */
     uint8_t request; 
-    uint8_t *COUNT_NOK(len) buf;
+    uint8_t *buf;
     storage_len_t len;
 
     /* Log r/w positions */
@@ -306,8 +306,8 @@ implementation
   void endRequest(error_t ok) {
     uint8_t c = client;
     uint8_t request = s[c].request;
-    storage_len_t actualLen = pos;
-    void *ptr = s[c].buf;
+    storage_len_t actualLen = s[c].len - len;
+    void *ptr = s[c].buf - actualLen;
     
     client = NO_CLIENT;
     s[c].request = R_IDLE;
@@ -326,7 +326,7 @@ implementation
 
   /* Enqueue request and request the underlying flash */
   error_t newRequest(uint8_t newRequest, uint8_t id,
-		     uint8_t *COUNT_NOK(length) buf, storage_len_t length) {
+		     uint8_t *buf, storage_len_t length) {
     s[id >> 1].circular = id & 1;
     id >>= 1;
 
@@ -334,9 +334,8 @@ implementation
       return EBUSY;
 
     s[id].request = newRequest;
-    s[id].buf = NULL;
-    s[id].len = length;
     s[id].buf = buf;
+    s[id].len = length;
     call Resource.request[id]();
 
     return SUCCESS;
@@ -344,12 +343,12 @@ implementation
 
   event void Resource.granted[uint8_t id]() {
     client = id;
-    pos = 0;
+    len = s[client].len;
     startRequest();
   }
 
   command error_t LogWrite.append[uint8_t id](void* buf, storage_len_t length) {
-    if (length > call LogRead.getSize[id]() - PAGE_SIZE)
+    if (len > call LogRead.getSize[id]() - PAGE_SIZE)
       /* Writes greater than the volume size are invalid.
 	 Writes equal to the volume size could break the log volume
 	 invariant (see next comment).
@@ -383,7 +382,7 @@ implementation
   }
 
   command error_t LogRead.seek[uint8_t id](storage_cookie_t offset) {
-    return newRequest(R_SEEK, id, TCAST(void *COUNT(offset), ((uint16_t)(offset >> 16))), offset);
+    return newRequest(R_SEEK, id, (void *)((uint16_t)(offset >> 16)), offset);
   }
 
   command storage_len_t LogRead.getSize[uint8_t id]() {
@@ -572,9 +571,8 @@ implementation
   /* ------------------------------------------------------------------ */
 
   void appendContinue() {
-    uint8_t *buf = s[client].buf + pos;
+    uint8_t *buf = s[client].buf;
     at45pageoffset_t offset = s[client].woffset, count;
-    storage_len_t len = s[client].len - pos;
     
     if (len == 0)
       {
@@ -594,9 +592,10 @@ implementation
     else
       count = PAGE_SIZE - offset;
 
+    s[client].buf += count;
     s[client].wpos += count;
     s[client].woffset += count;
-    pos += count;
+    len -= count;
 
     /* We normally lose data at the point we make the first write to a
        page in a log that has circled. */
@@ -625,7 +624,6 @@ implementation
   }
 
   void appendStart() {
-    storage_len_t len = s[client].len - pos;
     storage_len_t vlen = (storage_len_t)npages() * PAGE_SIZE;
 
     recordsLost = FALSE;
@@ -722,10 +720,9 @@ implementation
   /* ------------------------------------------------------------------ */
 
   void readContinue() {
-    uint8_t *buf = s[client].buf + pos;
+    uint8_t *buf = s[client].buf;
     at45pageoffset_t offset = s[client].roffset, count;
     at45pageoffset_t end = s[client].rend;
-    storage_len_t len = s[client].len - pos;
     
     if (len == 0)
       {
@@ -767,7 +764,8 @@ implementation
     else
       count = end - offset;
 
-    pos += count;
+    s[client].buf += count;
+    len -= count;
     s[client].rpos += count;
     s[client].roffset = offset + count;
 

@@ -1,4 +1,4 @@
-// $Id: LedsP.nc,v 1.6 2008-06-24 05:32:32 regehr Exp $
+// $Id: LedsP.nc,v 1.5 2008-06-11 00:46:27 razvanm Exp $
 
 /*
  * "Copyright (c) 2000-2005 The Regents of the University  of California.  
@@ -30,7 +30,7 @@
  * @date   March 21, 2005
  */
 
-module LedsP @safe() {
+module LedsP {
   provides {
     interface Init;
     interface Leds;

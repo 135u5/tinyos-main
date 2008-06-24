@@ -38,7 +38,7 @@
  
 #include "CC2420.h"
 
-module UniqueReceiveP @safe() {
+module UniqueReceiveP {
   provides {
     interface Receive;
     interface Receive as DuplicateReceive;

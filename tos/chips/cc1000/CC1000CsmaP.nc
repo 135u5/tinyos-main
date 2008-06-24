@@ -1,4 +1,4 @@
-// $Id: CC1000CsmaP.nc,v 1.8 2008-06-23 20:25:15 regehr Exp $
+// $Id: CC1000CsmaP.nc,v 1.7 2008-06-11 00:46:23 razvanm Exp $
 
 /*
  * "Copyright (c) 2000-2005 The Regents of the University  of California.  
@@ -50,7 +50,7 @@
  * @author David Gay
  */
   
-module CC1000CsmaP @safe() {
+module CC1000CsmaP {
   provides {
     interface Init;
     interface SplitControl;

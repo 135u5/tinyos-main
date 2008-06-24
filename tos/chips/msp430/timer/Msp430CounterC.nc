@@ -28,7 +28,7 @@
  *          intended use.
  */
  
-generic module Msp430CounterC( typedef frequency_tag ) @safe()
+generic module Msp430CounterC( typedef frequency_tag )
 {
   provides interface Counter<frequency_tag,uint16_t> as Counter;
   uses interface Msp430Timer;

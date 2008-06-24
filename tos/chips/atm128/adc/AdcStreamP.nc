@@ -1,4 +1,4 @@
-/* $Id: AdcStreamP.nc,v 1.12 2008-06-23 23:38:28 idgay Exp $
+/* $Id: AdcStreamP.nc,v 1.9 2008-06-04 19:22:33 regehr Exp $
  * Copyright (c) 2005 Intel Corporation
  * All rights reserved.
  *
@@ -43,7 +43,7 @@
  */
 #include "Timer.h"
 
-module AdcStreamP @safe() {
+module AdcStreamP {
   provides {
     interface Init @atleastonce();
     interface ReadStream<uint16_t>[uint8_t client];
@@ -72,7 +72,7 @@ implementation {
   };
   struct list_entry_t *bufferQueue[NSTREAM];
   struct list_entry_t * ONE_NOK * bufferQueueEnd[NSTREAM];
-  uint16_t * COUNT_NOK(lastCount) lastBuffer, lastCount;
+  uint16_t * ONE_NOK lastBuffer, lastCount;
 
   norace uint16_t count;
   norace uint16_t * COUNT_NOK(count) buffer; 
@@ -183,7 +183,6 @@ implementation {
   {
     /* The first reading may be imprecise. So we just do a dummy read
        to get things rolling - this is indicated by setting count to 0 */
-    buffer = pos = NULL;
     count = 0;
     period = call Atm128Calibrate.calibrateMicro(usPeriod);
     client = c;
@@ -209,7 +208,6 @@ implementation {
 	    bufferQueue[client] = entry->next;
 	    if (!bufferQueue[client])
 	      bufferQueueEnd[client] = &bufferQueue[client];
-	    pos = buffer = NULL;
 	    count = entry->count;
             tmp_count = count;
 	    pos = buffer = TCAST(uint16_t * COUNT_NOK(tmp_count), entry);
@@ -230,7 +228,7 @@ implementation {
     else
       {
 	*pos++ = data;
-	if (pos == buffer + count)
+	if (!--count)
 	  {
 	    atomic
 	      {
@@ -243,8 +241,8 @@ implementation {
 		  }
 		else
 		  {
-		    lastCount = count;
 		    lastBuffer = buffer;
+		    lastCount = pos - buffer;
 		  }
 	      }
 	    post bufferDone();

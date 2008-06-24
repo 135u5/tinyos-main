@@ -30,28 +30,59 @@
  * actually get sent out over the serial line.
  *
  * @author Kevin Klues (klueska@cs.wustl.edu)
- * @version $Revision: 1.2 $
- * @date $Date: 2008-06-23 22:46:54 $
+ * @version $Revision: 1.1 $
+ * @date $Date: 2007-09-04 21:19:25 $
  */
 
 #include "printf.h"
 module TestPrintfC {
   uses {
-    interface Boot;
+    interface Boot;  
+    interface Leds;
+    interface SplitControl as PrintfControl;
+    interface PrintfFlush;
   }
 }
 implementation {
 	
+  #define NUM_TIMES_TO_PRINT	5
+  uint16_t counter=0;
   uint8_t dummyVar1 = 123;
   uint16_t dummyVar2 = 12345;
   uint32_t dummyVar3 = 1234567890;
 
   event void Boot.booted() {
+    call PrintfControl.start();
+  }
+  
+  event void PrintfControl.startDone(error_t error) {
   	printf("Hi I am writing to you from my TinyOS application!!\n");
   	printf("Here is a uint8: %u\n", dummyVar1);
   	printf("Here is a uint16: %u\n", dummyVar2);
   	printf("Here is a uint32: %ld\n", dummyVar3);
-  	printfflush();
+  	call PrintfFlush.flush();
+  }
+
+  event void PrintfControl.stopDone(error_t error) {
+  	counter = 0;
+    call Leds.led2Toggle();
+  	printf("This should not be printed...");
+  	call PrintfFlush.flush();
+  }
+  
+  event void PrintfFlush.flushDone(error_t error) {
+  	if(counter < NUM_TIMES_TO_PRINT) {
+      printf("I am now iterating: %d\n", counter);
+  	  call PrintfFlush.flush();
+    }
+    else if(counter == NUM_TIMES_TO_PRINT) {
+      printf("This is a really short string...\n");
+      printf("I am generating this string to have just less than 250\ncharacters since that is the limit of the size I put on my\nmaximum buffer when I instantiated the PrintfC component.\n");
+      printf("Only part of this line should get printed because by writing\nthis sentence, I go over my character limit that the internal Printf buffer can hold.\n");
+      call PrintfFlush.flush();
+    }
+    else call PrintfControl.stop();
+    counter++;
   }
 }
 

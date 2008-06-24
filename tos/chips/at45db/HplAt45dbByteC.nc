@@ -22,7 +22,7 @@
  * @author David Gay
  */
 
-generic module HplAt45dbByteC(int sectorSizeLog2) @safe() {
+generic module HplAt45dbByteC(int sectorSizeLog2) {
   provides interface HplAt45db;
   uses {
     interface Resource;
@@ -47,7 +47,7 @@ implementation
     P_ERASE
   };
   uint8_t status = P_IDLE;
-  uint8_t flashCmd[9];
+  uint8_t flashCmd[4];
   at45pageoffset_t dataCount;
   uint8_t * COUNT_NOK(dataCount) data;
   uint8_t dontCare;
@@ -180,9 +180,8 @@ implementation
     flashCmd[1] = reqPage >> (16 - sectorSizeLog2);
     flashCmd[2] = reqPage << (sectorSizeLog2 - 8) | reqOffset >> 8;
     flashCmd[3] = reqOffset; // low-order 8 bits
-    data = NULL;
-    dataCount = reqCount;
     data = reqData;
+    dataCount = reqCount;
     dontCare = reqDontCare;
 
     call Resource.request();

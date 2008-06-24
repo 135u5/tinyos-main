@@ -1,4 +1,4 @@
-/* $Id: RandRWC.nc,v 1.7 2008-06-23 23:43:37 idgay Exp $
+/* $Id: RandRWC.nc,v 1.5 2007-09-13 23:10:22 scipio Exp $
  * Copyright (c) 2005 Intel Corporation
  * All rights reserved.
  *
@@ -13,7 +13,7 @@
  *
  * @author David Gay
  */
-module RandRWC @safe() {
+module RandRWC {
   uses {
     interface Boot;
     interface Leds;
@@ -37,7 +37,7 @@ implementation {
   int count, testCount, writeCount, countAtCommit;
   struct {
     uint32_t addr;
-    void *COUNT_NOK(len) data;
+    void *data;
     uint16_t len;
   } ops[NWRITES];
 
@@ -118,7 +118,6 @@ implementation {
 	if (addr + len > SIZE)
 	  addr = SIZE - len;
 	ops[i].addr = addr;
-	ops[i].data = NULL;
 	ops[i].len = len;
 	offset = rand() >> 8;
 	if (offset + ops[i].len > sizeof data)

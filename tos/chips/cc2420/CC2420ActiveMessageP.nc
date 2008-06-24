@@ -29,12 +29,12 @@
  * of the data payload.
  *
  * @author Philip Levis
- * @version $Revision: 1.18 $ $Date: 2008-06-24 05:32:31 $
+ * @version $Revision: 1.16 $ $Date: 2008-06-11 00:46:23 $
  */
  
 #include "CC2420.h"
 
-module CC2420ActiveMessageP @safe() {
+module CC2420ActiveMessageP {
   provides {
     interface AMSend[am_id_t id];
     interface Receive[am_id_t id];
@@ -57,6 +57,10 @@ module CC2420ActiveMessageP @safe() {
 }
 implementation {
 
+  enum {
+    CC2420_SIZE = MAC_HEADER_SIZE + MAC_FOOTER_SIZE,
+  };
+  
   /***************** AMSend Commands ****************/
   command error_t AMSend.send[am_id_t id](am_addr_t addr,
 					  message_t* msg,
@@ -69,7 +73,7 @@ implementation {
     
     signal SendNotifier.aboutToSend[id](addr, msg);
     
-    return call SubSend.send( msg, len );
+    return call SubSend.send( msg, len + CC2420_SIZE );
   }
 
   command error_t AMSend.cancel[am_id_t id](message_t* msg) {
@@ -175,10 +179,10 @@ implementation {
     }
     
     if (call AMPacket.isForMe(msg)) {
-      return signal Receive.receive[call AMPacket.type(msg)](msg, payload, len);
+      return signal Receive.receive[call AMPacket.type(msg)](msg, payload, len - CC2420_SIZE);
     }
     else {
-      return signal Snoop.receive[call AMPacket.type(msg)](msg, payload, len);
+      return signal Snoop.receive[call AMPacket.type(msg)](msg, payload, len - CC2420_SIZE);
     }
   }
   

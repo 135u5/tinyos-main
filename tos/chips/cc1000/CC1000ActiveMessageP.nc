@@ -1,4 +1,4 @@
-// $Id: CC1000ActiveMessageP.nc,v 1.12 2008-06-23 20:25:15 regehr Exp $
+// $Id: CC1000ActiveMessageP.nc,v 1.11 2008-06-11 00:46:23 razvanm Exp $
 
 /*
  * "Copyright (c) 2004-2005 The Regents of the University  of California.  
@@ -35,7 +35,7 @@
  * @date June 19 2006
  */
 
-module CC1000ActiveMessageP @safe() {
+module CC1000ActiveMessageP {
   provides {
     interface AMSend[am_id_t id];
     interface Receive[am_id_t id];

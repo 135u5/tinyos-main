@@ -1,4 +1,4 @@
-// $Id: At45dbP.nc,v 1.10 2008-06-23 20:25:15 regehr Exp $
+// $Id: At45dbP.nc,v 1.7 2008-06-11 00:46:23 razvanm Exp $
 
 /*
  * "Copyright (c) 2000-2003 The Regents of the University  of California.  
@@ -39,7 +39,7 @@
  * @author David Gay
  */
 
-module At45dbP @safe() {
+module At45dbP {
   provides {
     interface Init;
     interface At45db;
@@ -367,9 +367,8 @@ implementation
 		  void * COUNT_NOK(n) reqdata, at45pageoffset_t n) {
     request = req;
 
-    reqBuf = NULL;
-    reqBytes = n;
     reqBuf = reqdata;
+    reqBytes = n;
     reqPage = page;
     reqOffset = offset;
 
@@ -399,7 +398,8 @@ implementation
 					at45pageoffset_t n,
 					uint16_t baseCrc) {
     /* This is a hack (store crc in reqBuf), but it saves 2 bytes of RAM */
-    newRequest(R_READCRC, page, offset, TCAST(uint8_t * COUNT(n), baseCrc), n);
+    reqBuf = TCAST(uint8_t * COUNT(baseCrc), baseCrc);
+    newRequest(R_READCRC, page, offset, reqBuf, n);
   }
 
   command void At45db.write(at45page_t page, at45pageoffset_t offset,

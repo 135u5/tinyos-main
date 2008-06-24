@@ -42,24 +42,7 @@ configuration DynamicThreadC {
   }
 }
 implementation {
-  components DynamicThreadP;
-  components TinyThreadSchedulerC;
-  components BitArrayUtilsC;
-  components ThreadSleepC;
-  components TosMallocC;
-  
-  DynamicThread = DynamicThreadP;
-  ThreadNotification = DynamicThreadP.ThreadNotification;
-  
-  DynamicThreadP.ThreadSleep -> ThreadSleepC;
-  DynamicThreadP.ThreadScheduler -> TinyThreadSchedulerC;
-  DynamicThreadP.BitArrayUtils -> BitArrayUtilsC;
-  DynamicThreadP.Malloc -> TosMallocC;
-  
-  components ThreadMapC;
-  ThreadMapC.DynamicThreadInfo -> DynamicThreadP;
-  DynamicThreadP.ThreadCleanup -> ThreadMapC.DynamicThreadCleanup;
-  
-  components LedsC;
-  DynamicThreadP.Leds -> LedsC;
+  components ThreadP;
+  DynamicThread = ThreadP;
+  ThreadNotification = ThreadP.DynamicThreadNotification;
 }

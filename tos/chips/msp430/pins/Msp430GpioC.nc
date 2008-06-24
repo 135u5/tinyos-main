@@ -28,7 +28,7 @@
  *          intended use.
  */
 
-generic module Msp430GpioC() @safe() {
+generic module Msp430GpioC() {
   provides interface GeneralIO;
   uses interface HplMsp430GeneralIO as HplGeneralIO;
 }

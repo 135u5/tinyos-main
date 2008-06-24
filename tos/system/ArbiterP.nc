@@ -49,7 +49,7 @@
  * @author Philip Levis
  */
  
-generic module ArbiterP(uint8_t default_owner_id) @safe() {
+generic module ArbiterP(uint8_t default_owner_id) {
   provides {
     interface Resource[uint8_t id];
     interface ResourceRequested[uint8_t id];

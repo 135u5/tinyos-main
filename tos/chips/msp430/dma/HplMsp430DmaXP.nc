@@ -55,7 +55,7 @@
  * @author Jonathan Hui <jhui@archrock.com>
  * @author Joe Polastre <info@moteiv.com>
  * @author Mark Hays
- * @version $Revision: 1.6 $ $Date: 2008-06-23 20:25:15 $
+ * @version $Revision: 1.5 $ $Date: 2007-11-08 21:34:42 $
  */
 
 generic module HplMsp430DmaXP( uint16_t DMAxCTL_addr,
@@ -63,7 +63,7 @@ generic module HplMsp430DmaXP( uint16_t DMAxCTL_addr,
 			       uint16_t DMAxDA_addr,
 			       uint16_t DMAxSZ_addr,
 			       uint16_t DMAxTSEL_mask,
-			       uint16_t DMAxTSEL_shift ) @safe() {
+			       uint16_t DMAxTSEL_shift ) {
   
   provides interface HplMsp430DmaChannel as DMA;
   uses interface HplMsp430DmaInterrupt as Interrupt;

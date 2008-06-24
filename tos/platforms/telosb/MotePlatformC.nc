@@ -1,4 +1,4 @@
-module MotePlatformC @safe() {
+module MotePlatformC {
   provides interface Init;
 }
 implementation {

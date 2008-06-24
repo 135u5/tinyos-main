@@ -1,4 +1,4 @@
-// $Id: SchedulerBasicP.nc,v 1.6 2008-06-24 05:32:32 regehr Exp $
+// $Id: SchedulerBasicP.nc,v 1.5 2008-06-11 00:46:27 razvanm Exp $
 
 /*
  * "Copyright (c) 2000-2003 The Regents of the University  of California.  
@@ -40,7 +40,7 @@
 
 #include "hardware.h"
 
-module SchedulerBasicP @safe() {
+module SchedulerBasicP {
   provides interface Scheduler;
   provides interface TaskBasic[uint8_t id];
   uses interface McuSleep;
