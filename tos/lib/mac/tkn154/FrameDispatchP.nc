@@ -28,12 +28,12 @@
  *
  * - Revision -------------------------------------------------------------
  * $Revision: 1.1 $
- * $Date: 2008-08-02 16:56:21 $
+ * $Date: 2008-06-16 18:00:28 $
  * @author Jan Hauer <hauer@tkn.tu-berlin.de>
  * ========================================================================
  */
 #include "TKN154_MAC.h"
-configuration RadioControlP  
+configuration FrameDispatchP  
 {
   provides
   {
@@ -56,16 +56,16 @@ configuration RadioControlP
 }
 implementation
 {
-  components RadioControlImplP;
-  RadioRx = RadioControlImplP.MacRx;
-  RadioTx = RadioControlImplP.MacTx;
-  RadioOff = RadioControlImplP.MacRadioOff;
-  PhyRx = RadioControlImplP.PhyRx;
-  PhyTx = RadioControlImplP.PhyTx;
-  PhyRadioOff = RadioControlImplP.PhyRadioOff;
-  RadioPromiscuousMode = RadioControlImplP;
-  Leds = RadioControlImplP;
-  Debug = RadioControlImplP;
+  components FrameDispatchImplP;
+  RadioRx = FrameDispatchImplP.MacRx;
+  RadioTx = FrameDispatchImplP.MacTx;
+  RadioOff = FrameDispatchImplP.MacRadioOff;
+  PhyRx = FrameDispatchImplP.PhyRx;
+  PhyTx = FrameDispatchImplP.PhyTx;
+  PhyRadioOff = FrameDispatchImplP.PhyRadioOff;
+  RadioPromiscuousMode = FrameDispatchImplP;
+  Leds = FrameDispatchImplP;
+  Debug = FrameDispatchImplP;
   LedsRadioClient = Leds;
 
   components new SimpleRoundRobinTransferArbiterC(IEEE802154_RADIO_RESOURCE) as Arbiter;
@@ -73,5 +73,5 @@ implementation
   TokenRequested = Arbiter;
   TokenTransferControl = Arbiter;
   IsResourceRequested = Arbiter;
-  RadioControlImplP.ArbiterInfo -> Arbiter;
+  FrameDispatchImplP.ArbiterInfo -> Arbiter;
 }
