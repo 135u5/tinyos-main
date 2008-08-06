@@ -27,8 +27,8 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  * - Revision -------------------------------------------------------------
- * $Revision: 1.3 $
- * $Date: 2008-08-02 16:56:21 $
+ * $Revision: 1.2 $
+ * $Date: 2008-06-18 15:39:32 $
  * @author Jan Hauer <hauer@tkn.tu-berlin.de>
  * ========================================================================
  */
@@ -121,27 +121,27 @@ implementation
              RxEnableP,
              IndirectTxP,
              PibP,
-             RadioControlP,
+             FrameDispatchP,
 
 #ifndef IEEE154_BEACON_SYNC_DISABLED
              BeaconSynchronizeP,
-             new CsmaQueueP() as DeviceCapQueue,
-             new CsmaP(INCOMING_SUPERFRAME) as DeviceCap,
+             new CapQueueP() as DeviceCapQueue,
+             new CapP(INCOMING_SUPERFRAME) as DeviceCap,
 #else
              NoBeaconSynchronizeP as BeaconSynchronizeP,
-             new NoCsmaQueueP() as DeviceCapQueue,
-             new NoCsmaP() as DeviceCap,
+             new NoCapQueueP() as DeviceCapQueue,
+             new NoCapP() as DeviceCap,
 #endif
              NoDeviceCfpP as DeviceCfp,
 
 #ifndef IEEE154_BEACON_TX_DISABLED
              BeaconTransmitP,
-             new CsmaQueueP() as CoordCapQueue,
-             new CsmaP(OUTGOING_SUPERFRAME) as CoordCap,
+             new CapQueueP() as CoordCapQueue,
+             new CapP(OUTGOING_SUPERFRAME) as CoordCap,
 #else
              NoBeaconTransmitP as BeaconTransmitP,
-             new NoCsmaQueueP() as CoordCapQueue,
-             new NoCsmaP() as CoordCap,
+             new NoCapQueueP() as CoordCapQueue,
+             new NoCapP() as CoordCap,
 #endif
              NoCoordCfpP as CoordCfp,
 
@@ -369,11 +369,11 @@ implementation
 
   PibP.CapQueueReset -> DeviceCapQueue;
   DeviceCapQueue.Queue -> DeviceCapQueueC;
-  DeviceCapQueue.FrameTxCsma -> DeviceCap;
+  DeviceCapQueue.CapTx -> DeviceCap;
 
   PibP.CapQueueReset -> CoordCapQueue;
   CoordCapQueue.Queue -> CoordCapQueueC;
-  CoordCapQueue.FrameTxCsma -> CoordCap;
+  CoordCapQueue.CapTx -> CoordCap;
   
   components new RadioClientC() as DeviceCapRadioClient;
   PibP.CapReset -> DeviceCap;
@@ -516,12 +516,12 @@ implementation
   PibP.Token -> PibRadioClient;
   PibP.RadioOff -> PibRadioClient;
 
-/* ------------------------- Radio Control ---------------------------- */
+/* ---------------------------- Dispatcher ---------------------------- */
 
-  RadioControlP.PhyTx = RadioTx;
-  RadioControlP.PhyRx = RadioRx;
-  RadioControlP.PhyRadioOff = RadioOff;
-  RadioControlP.RadioPromiscuousMode -> RxEnableP;
-  RadioControlP.Leds = Leds;
-  RadioControlP.Debug = Ieee802154Debug[RADIORXTX_CLIENT];
+  FrameDispatchP.PhyTx = RadioTx;
+  FrameDispatchP.PhyRx = RadioRx;
+  FrameDispatchP.PhyRadioOff = RadioOff;
+  FrameDispatchP.RadioPromiscuousMode -> RxEnableP;
+  FrameDispatchP.Leds = Leds;
+  FrameDispatchP.Debug = Ieee802154Debug[RADIORXTX_CLIENT];
 }

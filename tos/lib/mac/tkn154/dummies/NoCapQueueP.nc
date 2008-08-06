@@ -28,12 +28,12 @@
  *
  * - Revision -------------------------------------------------------------
  * $Revision: 1.1 $
- * $Date: 2008-08-02 16:56:21 $
+ * $Date: 2008-06-16 18:00:30 $
  * @author Jan Hauer <hauer@tkn.tu-berlin.de>
  * ========================================================================
  */
 #include "TKN154_MAC.h"
-generic module NoCsmaQueueP()
+generic module NoCapQueueP()
 {
   provides
   {
@@ -45,7 +45,7 @@ generic module NoCsmaQueueP()
   uses
   {
     interface Queue<ieee154_txframe_t*>; 
-    interface FrameTx as FrameTxCsma;
+    interface FrameTx as CapTx;
     interface FrameRx as SubFrameExtracted;
   }
 }
@@ -61,7 +61,7 @@ implementation
     return IEEE154_TRANSACTION_OVERFLOW;
   }
 
-  event void FrameTxCsma.transmitDone(ieee154_txframe_t *data, ieee154_status_t status) { }
+  event void CapTx.transmitDone(ieee154_txframe_t *data, ieee154_status_t status) { }
 
   event message_t* SubFrameExtracted.received(message_t* frame) { return frame; }
 

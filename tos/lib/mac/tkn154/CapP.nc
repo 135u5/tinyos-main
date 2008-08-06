@@ -27,8 +27,8 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  * - Revision -------------------------------------------------------------
- * $Revision: 1.1 $
- * $Date: 2008-08-02 16:56:21 $
+ * $Revision: 1.3 $
+ * $Date: 2008-06-25 10:19:03 $
  * @author Jan Hauer <hauer@tkn.tu-berlin.de>
  * ========================================================================
  */
@@ -37,27 +37,24 @@
 #include "TKN154_MAC.h"
 
 /** 
- * This module implements the slotted and unslotted CSMA-CA algorithm.
- * Unslotted CSMA-CA is used in nonbeacon-enabled PANs, slotted CSMA-CA is used
- * in beacon-enabled PANs. In a beacon-enabled PAN this module is responsible
- * for channel access during the contention access period (CAP). It does
- * slightly different things depending on whether it is the CAP for an outgoing
+ * This module is responsible for sending/receiving frames during the
+ * contention access period (CAP in beacon-enabled mode). It does slightly
+ * different things depending on whether it is the CAP for an outgoing
  * superframe (superframeDirection = OUTGOING_SUPERFRAME), i.e. the CAP from
  * the perspective of a coordinator after it has transmitted its own beacon; or
  * for an incoming superframe (superframeDirection = INCOMING_SUPERFRAME), i.e.
  * the CAP from the perspective of a device after it has received a beacon from
- * its coordinator; for example, in the CAP a coordinator will usually listen for
- * incoming frames from the devices, and a device will usually switch the radio
- * off unless it has a frame to transmit. In nonbeacon-enabled PANs the
- * superframeDirection parameter is ignored.
+ * its coordinator (e.g. in the CAP a coordinator will usually listen for 
+ * incoming frames from the devices, and a device will usually switch the
+ * radio off unless it has a frame to transmit).
  */
 
-generic module CsmaP(uint8_t superframeDirection)
+generic module CapP(uint8_t superframeDirection)
 {
   provides
   {
     interface Init as Reset;
-    interface FrameTx as FrameTx;
+    interface FrameTx as CapTx;
     interface FrameRx as FrameRx[uint8_t frameType];
     interface FrameExtracted as FrameExtracted[uint8_t frameType];
     interface FrameTxNow as BroadcastTx;
@@ -161,9 +158,9 @@ implementation
       return FAIL;
     }
     if (m_currentFrame)
-      signal FrameTx.transmitDone(m_currentFrame, IEEE154_TRANSACTION_OVERFLOW);
+      signal CapTx.transmitDone(m_currentFrame, IEEE154_TRANSACTION_OVERFLOW);
     if (m_lastFrame)
-      signal FrameTx.transmitDone(m_lastFrame, IEEE154_TRANSACTION_OVERFLOW);
+      signal CapTx.transmitDone(m_lastFrame, IEEE154_TRANSACTION_OVERFLOW);
     if (m_bcastFrame)
       signalTxBroadcastDone(m_bcastFrame, IEEE154_TRANSACTION_OVERFLOW);
     m_currentFrame = m_lastFrame = m_bcastFrame = NULL;
@@ -214,8 +211,9 @@ implementation
     call Debug.flush();
   }
 
-  command ieee154_status_t FrameTx.transmit(ieee154_txframe_t *frame)
+  command ieee154_status_t CapTx.transmit(ieee154_txframe_t *frame)
   {
+    // this frame (DATA or COMMAND) should be transmitted in the CAP
     if (m_currentFrame != NULL)
       return IEEE154_TRANSACTION_OVERFLOW;
     else {
@@ -618,7 +616,7 @@ implementation
     m_lastFrame = NULL; // only now can a next transmission begin 
     m_indirectTxPending = FALSE;
     if (lastFrame)
-      signal FrameTx.transmitDone(lastFrame, m_result);
+      signal CapTx.transmitDone(lastFrame, m_result);
     updateState();
   }
 
@@ -730,7 +728,7 @@ implementation
 
   async event void TokenRequested.immediateRequested() {}
 
-  default event void FrameTx.transmitDone(ieee154_txframe_t *data, ieee154_status_t status){}
+  default event void CapTx.transmitDone(ieee154_txframe_t *data, ieee154_status_t status){}
   default event message_t* FrameRx.received[uint8_t client](message_t* data){return data;}
   default async command bool IsRxEnableActive.getNow(){return FALSE;}
 

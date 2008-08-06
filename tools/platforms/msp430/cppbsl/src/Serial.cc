@@ -33,13 +33,6 @@
  */
 #include <stdio.h>
 #include <iostream>
-#include "../config.h"
-#ifdef HAVE_LINUX_VERSION_H
-#include <linux/version.h>
-#else
-#define LINUX_VERSION_CODE 1
-#define KERNEL_VERSION 3
-#endif
 
 #include "Serial.h"
 
@@ -90,7 +83,6 @@ int serial_connect(int* err, const char* dev, int* readFD, int* writeFD, termios
         return -1;
     }
     /* prepare attributes */
-#if defined(HAVE_LINUX_VERSION_H) && (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,24))
     r = tcgetattr(*writeFD, &my_tios);
     if(r == -1) {
         *err = errno;
@@ -135,30 +127,7 @@ int serial_connect(int* err, const char* dev, int* readFD, int* writeFD, termios
         close(*writeFD);
         return -1;        
     }
-#else
-    r = tcgetattr(*writeFD, &my_tios);
-    if(r == -1) {
-        *err = errno;
-        close(*readFD);
-        close(*writeFD);
-        return -1;
-    }
-    *pt = my_tios;
-    cfmakeraw(&my_tios);
-    my_tios.c_iflag |= IGNBRK | INPCK;
-    my_tios.c_cflag |= (CS8 | CLOCAL | CREAD | PARENB);
-    cfsetispeed(&my_tios, B9600);
-    cfsetospeed(&my_tios, B9600);
-    r = tcsetattr(*readFD, TCSANOW, &my_tios);
-    if(r == -1) {
-        *err = errno;
-        r = tcsetattr(*writeFD, TCSANOW, pt);
-        close(*readFD);
-        close(*writeFD);
-        return -1;        
-    }
-#endif
-    
+
     // clear buffers
     r = tcflush(*writeFD, TCIOFLUSH);
     if(r == -1) {
@@ -375,10 +344,8 @@ int BaseSerial::txrx(int *err, frame_t *txframe, frame_t *rxframe) {
 }
 
 int BaseSerial::highSpeed(int *err) {
-    int r;
-#if defined(HAVE_LINUX_VERSION_H) && (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,24))
     struct serial_struct serinfo;
-    r = ioctl(serialWriteFD, TIOCGSERIAL, &serinfo);
+    int r = ioctl(serialWriteFD, TIOCGSERIAL, &serinfo);
     if(r == -1) {
         *err = errno;
         return -1;
@@ -388,19 +355,6 @@ int BaseSerial::highSpeed(int *err) {
     serinfo.flags &= ~ASYNC_SPD_MASK;
     serinfo.flags |= ASYNC_SPD_CUST;
     r = ioctl(serialWriteFD, TIOCSSERIAL, &serinfo);
-#else
-    struct termios my_tios;
-    r = tcgetattr(serialWriteFD, &my_tios);
-    cfsetispeed(&my_tios, B38400); 
-    cfsetospeed(&my_tios, B38400);
-    r = tcsetattr(serialReadFD, TCSANOW, &my_tios);
-    if(r == -1) {
-        *err = errno;
-    }
-    else {
-        r = tcsetattr(serialWriteFD, TCSANOW, &my_tios);
-    }
-#endif    
     if(r == -1) {
         *err = errno;
         return -1;
