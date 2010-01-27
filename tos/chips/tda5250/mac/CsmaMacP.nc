@@ -45,6 +45,7 @@
 // #define MACM_DEBUG                 // debug...
 module CsmaMacP {
     provides {
+        interface Init;
         interface SplitControl;
         interface MacSend;
         interface MacReceive;
@@ -78,22 +79,16 @@ module CsmaMacP {
         interface LocalTime<T32khz> as LocalTime32kHz;
         
 #ifdef MACM_DEBUG
-        interface SerialDebug;
+        interface GeneralIO as Led0;
+        interface GeneralIO as Led1;
+        interface GeneralIO as Led2;
+        interface GeneralIO as Led3;
 #endif
     }
 }
 implementation
 {
-    /****** debug vars & defs & functions  ***********************/
-#ifdef MACM_DEBUG
-    void sdDebug(uint16_t p) {
-        call SerialDebug.putPlace(p);
-    };
-#else
-    void sdDebug(uint16_t p) {};
-#endif
 
-    /******* constants and type definitions *********************/
     enum {
 
         BYTE_TIME=ENCODED_32KHZ_BYTE_TIME,           // phy encoded
@@ -148,17 +143,17 @@ implementation
     } flags_t;
 
     /* Packet vars */
-    message_t* txBufPtr = NULL;
+    message_t* txBufPtr;
     message_t ackMsg;
 
     uint8_t txLen;
-    uint8_t shortRetryCounter = 0;
+    uint8_t shortRetryCounter;
 
-    uint8_t longRetryCounter = 0;
+    uint8_t longRetryCounter;
     unsigned checkCounter;
     
-    macState_t macState = INIT;
-    uint8_t flags = 0;
+    macState_t macState;
+    uint8_t flags;
     uint8_t seqNo;
     
     uint16_t restLaufzeit;
@@ -166,6 +161,77 @@ implementation
     uint16_t rssiValue = 0;
 
     uint32_t rxTime = 0;
+    
+    /****** debug vars & defs & functions  ***********************/
+#ifdef MACM_DEBUG
+#define HISTORY_ENTRIES 100
+    typedef struct {
+        int index;
+        macState_t state;
+        int        place;
+    } history_t;
+    
+    history_t history[HISTORY_ENTRIES];
+    unsigned histIndex;
+    void storeOldState(int p) {
+        atomic {
+            history[histIndex].index = histIndex;
+            history[histIndex].state = macState;
+            history[histIndex].place = p;
+            histIndex++;
+            if(histIndex >= HISTORY_ENTRIES) histIndex = 0;
+        }
+    }
+#else
+    void storeOldState(int p) {};
+#endif
+
+    void signalFailure(uint8_t place) {
+#ifdef MACM_DEBUG
+        unsigned long i;
+        atomic {
+            for(;;) {
+                call Led0.set();
+                call Led1.clr();
+                call Led2.clr();
+                call Led3.clr();
+                
+                for(i = 0; i < 1000000; i++) {
+                    ;
+                }
+
+                (place & 1) ? call Led0.set() : call Led0.clr();
+                (place & 2) ? call Led1.set() : call Led1.clr();
+                (place & 4) ? call Led2.set() : call Led2.clr();
+                (place & 8) ? call Led3.set() : call Led3.clr();
+
+                for(i = 0; i < 1000000; i++) {
+                    ;
+                }
+
+                (macState & 1) ? call Led0.set() : call Led0.clr();
+                (macState & 2) ? call Led1.set() : call Led1.clr();
+                (macState & 4) ? call Led2.set() : call Led2.clr();
+                (macState & 8) ? call Led3.set() : call Led3.clr();
+
+                for(i = 0; i < 1000000; i++) {
+                    ;
+                }
+            }
+        }
+#endif
+    }
+
+    void signalMacState() {
+#ifdef MACM_DEBUG
+/*
+         (macState & 1) ? call Led0.set() : call Led0.clr();
+         (macState & 2) ? call Led1.set() : call Led1.clr();
+         (macState & 4) ? call Led2.set() : call Led2.clr();
+         (macState & 8) ? call Led3.set() : call Led3.clr();
+*/
+#endif
+    }
     
     /****** Secure switching of radio modes ***/
     
@@ -290,7 +356,7 @@ implementation
         longRetryCounter++;
         shortRetryCounter = 1;
         if(longRetryCounter > MAX_LONG_RETRY) {
-            sdDebug(13);
+            storeOldState(13);
             getMetadata(txBufPtr)->ack = WAS_NOT_ACKED;
             signalSendDone(FAIL);
         }
@@ -313,7 +379,7 @@ implementation
             setFlag(&flags, RESUME_BACKOFF);
             restLaufzeit = backoff(longRetryCounter);
             updateRetryCounters();
-            sdDebug(92);
+            storeOldState(92);
         }
     }
 
@@ -330,13 +396,14 @@ implementation
     void checkSend() {
         if((txBufPtr != NULL) && (macState == RX) && (!call Timer.isRunning())) {
             macState = CCA;
+            signalMacState();
             checkCounter = 0;
             requestAdc();
             call Timer.start(DATA_DETECT_TIME);
-            sdDebug(170);
+            storeOldState(170);
         }
         else {
-            sdDebug(171);
+            storeOldState(171);
             post ReleaseAdcTask();
         }
     }
@@ -388,11 +455,29 @@ implementation
         return isFlagSet(&token, TOKEN_ACK_FLAG);
     }
     
+    /**************** Init ************************/
+    
+    command error_t Init.init(){
+        atomic {
+            txBufPtr = NULL;
+            macState = INIT;
+            signalMacState();
+            shortRetryCounter = 0;
+            longRetryCounter = 0;
+            flags = 0;
+#ifdef MACM_DEBUG
+            histIndex = 0;
+#endif
+        }
+        return SUCCESS;
+    }
+
     /****************  SplitControl  *****************/
 
     task void StartDoneTask() {
         atomic {
             macState = RX;
+            signalMacState();
             call UartPhyControl.setNumPreambles(MIN_PREAMBLE_BYTES);
         }
         post ReleaseAdcTask();
@@ -403,9 +488,9 @@ implementation
         call CcaStdControl.start();
         atomic {
             macState = INIT;
-            
+            signalMacState();
             setRxMode();
-            sdDebug(1);
+            storeOldState(1);
         }
         return SUCCESS;
     }
@@ -414,15 +499,11 @@ implementation
         atomic {
             if (macState != RX) {
                 post StopDone();
-                sdDebug(2);
+                storeOldState(2);
             } else {
-                sdDebug(3);
+                storeOldState(3);
                 call Timer.stop();
-                txBufPtr = NULL;
-                macState = INIT;
-                shortRetryCounter = 0;
-                longRetryCounter = 0;
-                flags = 0;
+                call Init.init();
                 signal SplitControl.stopDone(SUCCESS); 
             }
         }
@@ -430,7 +511,7 @@ implementation
     
     command error_t SplitControl.stop() {
         call CcaStdControl.stop();
-        sdDebug(4);
+        storeOldState(4);
         post StopDone();
         return SUCCESS;
     }
@@ -461,13 +542,13 @@ implementation
         atomic  {
             setFlag(&flags, RSSI_STABLE);
             if(macState == INIT) {
-                sdDebug(11);
+                storeOldState(11);
                 if(call RssiAdcResource.isOwner()) {
                     call ChannelMonitorControl.updateNoiseFloor();
                 }
             }
             else {
-                sdDebug(12);
+                storeOldState(12);
             }
         }
     }
@@ -476,9 +557,9 @@ implementation
         post postponeReRx();
         atomic {
             if(macState == SW_RX) {
-                sdDebug(21);
+                storeOldState(21);
                 macState = RX;
-                
+                signalMacState();
                 if(isFlagSet(&flags, RESUME_BACKOFF)) {
                     clearFlag(&flags, RESUME_BACKOFF);
                     call Timer.start(restLaufzeit);
@@ -487,14 +568,16 @@ implementation
                 }
             }
             else if(macState == SW_RX_ACK) {
-                sdDebug(22);
+                storeOldState(22);
                 macState = RX_ACK;
+                signalMacState();
             }
             else if(macState == INIT) {
-                sdDebug(24);
+                storeOldState(24);
             }
             else {
-                sdDebug(25);
+                storeOldState(25);
+                signalFailure(1);
             }
         }
     }
@@ -503,27 +586,31 @@ implementation
         post postponeReRx();
         atomic {
             if(macState == SW_TX) {
-                sdDebug(30);
+                storeOldState(30);
                 if(txBufPtr) {
                     macState = TX;
+                    signalMacState();
                     if(call PacketSend.send(txBufPtr, txLen) == SUCCESS) {
-                        sdDebug(31);
+                        storeOldState(31);
                     } else {
-                        sdDebug(32);
+                        storeOldState(32);
+                        signalFailure(2);
                     }
                 }
             }
             else if(macState == SW_TX_ACK) {
                 macState = TX_ACK;
-                
+                signalMacState();
                 if(call PacketSend.send(&ackMsg, 0) == SUCCESS) {
-                    sdDebug(53);
+                    storeOldState(53);
                 } else {
-                    sdDebug(54);
+                    storeOldState(54);
+                    signalFailure(6);
                 }
             }
             else {
-                sdDebug(33);
+                storeOldState(33);
+                signalFailure(3);
             }
         }
     }
@@ -533,13 +620,11 @@ implementation
         error_t err = SUCCESS;
         atomic {
             if((shortRetryCounter == 0) && (txBufPtr == NULL) && (macState != INIT)) { 
-              sdDebug(40);
+              storeOldState(40);
                 shortRetryCounter = 1;
                 longRetryCounter = 1;
                 txBufPtr = msg;
                 txLen = len;
-                sdDebug(10);
-                sdDebug(len);
                 seqNo++;
                 if(seqNo >= TOKEN_ACK_FLAG) seqNo = 1;
                 getHeader(msg)->token = seqNo;
@@ -547,7 +632,7 @@ implementation
                 if(macState != RX_P) checkSend();
             }
             else {
-                sdDebug(41);
+                storeOldState(41);
                 err = EBUSY;
             }
         }
@@ -558,14 +643,14 @@ implementation
         error_t err = SUCCESS;
         if((shortRetryCounter != 0) && (txBufPtr == msg) &&
            (macState != TX) && (macState != RX_ACK) && (macState != SW_RX_ACK)) {
-            sdDebug(50);
+            storeOldState(50);
             shortRetryCounter = 0;
             txBufPtr = NULL;
             txLen = 0;
             signal MacSend.sendDone(msg, ECANCEL);
         }
         else {
-            sdDebug(51);
+            storeOldState(51);
             err = FAIL;
         }
         return err;
@@ -575,27 +660,28 @@ implementation
     async event void PacketReceive.receiveDetected() {
         rssiValue = INVALID_SNR;
         if(macState <= RX_ACK) {
-            sdDebug(60);
+            storeOldState(60);
             interruptBackoffTimer();
             if(macState == CCA) computeBackoff();
         }
         if(macState <= RX) {
-            sdDebug(61);
+            storeOldState(61);
             macState = RX_P;
-            
+            signalMacState();
             requestAdc();
         }
         else if(macState <= RX_ACK) {
-            sdDebug(62);
+            storeOldState(62);
             macState = RX_ACK_P;
-            
+            signalMacState();
         }
         else if(macState == INIT) {
-            sdDebug(63);
+            storeOldState(63);
         }
         else {
           post ReleaseAdcTask();  
-          sdDebug(64);
+          storeOldState(64);
+          signalFailure(4);	
         } 
     }
     
@@ -605,7 +691,7 @@ implementation
         macState_t action = RX;
         if(macState == RX_P) {
             if(error == SUCCESS) {
-                sdDebug(82);
+                storeOldState(82);
                 isCnt = isControl(msg);
                 if(msgIsForMe(msg)) {
                     if(!isCnt) {
@@ -615,43 +701,43 @@ implementation
                             rememberMsg(m);   
                         }
                         if(needsAckRx(msg)) {
-                            sdDebug(87);
+                            storeOldState(87);
                             action = CCA_ACK;
                         } else {
-                            sdDebug(88);
+                            storeOldState(88);
                         }
                     }
                     else {
-                        sdDebug(89);
+                        storeOldState(89);
                     }
                 }
                 else {
-                    sdDebug(90);
+                    storeOldState(90);
                 }
             }
             else {
-                sdDebug(91);
+                storeOldState(91);
             }
         }
         else if(macState == RX_ACK_P) {
             if(error == SUCCESS) {
                 if(ackIsForMe(msg)) {
-                    sdDebug(92);
+                    storeOldState(92);
                     (getMetadata(txBufPtr))->ack = WAS_ACKED;
                     signalSendDone(SUCCESS);
                 }
                 else {
-                    sdDebug(93);
+                    storeOldState(93);
                     updateLongRetryCounters();
                 }
             }
             else {
                 if(call Timer.isRunning()) {
-                    sdDebug(94);
+                    storeOldState(94);
                     action = RX_ACK;
                 }
                 else {
-                    sdDebug(95);
+                    storeOldState(95);
                     if(needsAckTx(txBufPtr)) {
                         updateLongRetryCounters();
                     }
@@ -667,16 +753,16 @@ implementation
         if(action == CCA_ACK) {
             prepareAck(msg);
             macState = CCA_ACK;
-            
+            signalMacState();
             call Timer.start(RX_SETUP_TIME - TX_SETUP_TIME + ADDED_DELAY);
         }
         else if(action == RX_ACK) {
             macState = RX_ACK;
-            
+            signalMacState();
         }
         else if(action == RX) {
             macState = RX;
-            
+            signalMacState();
             if(isFlagSet(&flags, RESUME_BACKOFF)) {
                 clearFlag(&flags, RESUME_BACKOFF);
                 call Timer.start(restLaufzeit);
@@ -687,14 +773,15 @@ implementation
         }
         else if(action == TX) {
             macState = SW_TX;
-            
+            signalMacState();
             setTxMode();
         }
         else if(action == INIT) {
             
         }
         else {
-            sdDebug(94);
+            storeOldState(94);
+            signalFailure(11);
         }
         post ReleaseAdcTask();
         return m;        
@@ -702,23 +789,27 @@ implementation
 
     async event void PacketSend.sendDone(message_t* msg, error_t error) {
         if(macState == TX) {
+            if(msg != txBufPtr) signalFailure(12);
             if(needsAckTx(msg)) {
-                sdDebug(97);
+                storeOldState(97);
                 macState = SW_RX_ACK;
-                
+                signalMacState();
                 call Timer.start(RX_ACK_TIMEOUT);
             } else {
-                sdDebug(99);
+                storeOldState(99);
                 signalSendDone(error);
                 macState = SW_RX;
-                
+                signalMacState();
             }
             setRxMode();
         }
         else if(macState == TX_ACK) {
             macState = SW_RX;
-            
+            signalMacState();
             setRxMode();
+        }
+        else {
+            signalFailure(13);
         }
         post ReleaseAdcTask();
     }
@@ -730,8 +821,8 @@ implementation
             computeBackoff();
             macState = RX;
             requestAdc();
-            sdDebug(150);
-            
+            storeOldState(150);
+            signalMacState();
             if(!call Timer.isRunning()) call Timer.start(TX_GAP_TIME >> 1);
         } else if(macState == RX) {
             if(!call Timer.isRunning()) call Timer.start(TX_GAP_TIME + backoff(0));
@@ -745,30 +836,30 @@ implementation
         else if(macState == CCA) {
             checkCounter++;
             if(checkCounter < 3) {
-                sdDebug(158);                
+                storeOldState(158);                
                 call Timer.start((TX_GAP_TIME + backoff(0))>>1);
                 requestAdc();
             }
             else {
                 call Timer.stop();
-                sdDebug(159);
+                storeOldState(159);
                 macState = SW_TX;
-                
+                signalMacState();
                 setTxMode();
             }
         }
     }
     
     async event void Timer.fired() {
-        sdDebug(100);
+        storeOldState(100);
         if(macState == CCA) {
             if((!call RssiAdcResource.isOwner()) || (call ChannelMonitor.start() != SUCCESS)) {
                 if(call UartPhyControl.isBusy()) {
-                    sdDebug(101);
+                    storeOldState(101);
                     checkOnBusy();
                 }
                 else {
-                    sdDebug(102);
+                    storeOldState(102);
                     checkOnIdle();
                 }
             } else {
@@ -777,30 +868,31 @@ implementation
         }
         else if(macState == RX_ACK) {
             if(needsAckTx(txBufPtr)) {
-                sdDebug(103);
+                storeOldState(103);
                 updateLongRetryCounters();
                 macState = RX;
                 call Timer.start(backoff(longRetryCounter));
             }
             else {
-                sdDebug(104);
+                storeOldState(104);
+                signalFailure(7);                
             }
         }
         else if(macState == CCA_ACK) {
-            sdDebug(160);
+            storeOldState(160);
             macState = SW_TX_ACK;
-            
+            signalMacState();
             setTxMode();
         }
         else if((macState == RX_ACK_P) || (macState == RX_P)) {
-            sdDebug(108);
+            storeOldState(108);
         }
         else if(macState == INIT) {
-            sdDebug(109);
+            storeOldState(109);
             post StartDoneTask();
         }
         else {
-            sdDebug(110);
+            storeOldState(110);
             checkSend();
         }
     }
@@ -809,13 +901,13 @@ implementation
 
     async event void ChannelMonitor.channelBusy() {
       clearFlag(&flags, CCA_PENDING);  
-      sdDebug(120);
+      storeOldState(120);
         checkOnBusy();
     }
 
     async event void ChannelMonitor.channelIdle() {
       clearFlag(&flags, CCA_PENDING);  
-      sdDebug(121);
+      storeOldState(121);
         checkOnIdle();
     }
 
@@ -824,10 +916,11 @@ implementation
     
     event void ChannelMonitorControl.updateNoiseFloorDone() {
         if(macState == INIT) {
-            sdDebug(122);
+            storeOldState(122);
             post StartDoneTask();
         } else {
-            sdDebug(124);
+            storeOldState(124);
+            signalFailure(11);
         }
     }
 
@@ -880,11 +973,11 @@ implementation
         macState_t ms;
         atomic ms = macState;
         if((ms == INIT) && isFlagSet(&flags, RSSI_STABLE)) {
-            sdDebug(145);
+            storeOldState(145);
             call ChannelMonitorControl.updateNoiseFloor();            
         }
         else {
-            sdDebug(146);
+            storeOldState(146);
             call RssiAdcResource.release();
         }
     }

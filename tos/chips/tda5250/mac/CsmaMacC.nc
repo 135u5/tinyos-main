@@ -53,7 +53,8 @@ configuration CsmaMacC {
   }
 }
 implementation {
-  components  Tda5250RadioC,    
+  components  MainC,
+      Tda5250RadioC,    
       CsmaMacP,
       RssiFixedThresholdCMC as Cca,
       new Alarm32khz16C() as Timer,
@@ -66,6 +67,8 @@ implementation {
       ,PlatformLedsC
 #endif
       ;
+              
+    MainC.SoftwareInit -> CsmaMacP;
     
     SplitControl = CsmaMacP;
     
@@ -101,9 +104,11 @@ implementation {
     CsmaMacP.TimeDiff16 -> TimeDiffC;
     CsmaMacP.LocalTime32kHz -> LocalTimeC;
 
-#ifdef MACM_DEBUG
-    components new SerialDebugC() as SD;
-    CsmaMacP.SerialDebug -> SD;
+#ifdef MAC_DEBUG
+    CsmaMacP.Led0 -> PlatformLedsC.Led0;
+    CsmaMacP.Led1 -> PlatformLedsC.Led1;
+    CsmaMacP.Led2 -> PlatformLedsC.Led2;
+    CsmaMacP.Led3 -> PlatformLedsC.Led3;
 #endif    
 }
 
