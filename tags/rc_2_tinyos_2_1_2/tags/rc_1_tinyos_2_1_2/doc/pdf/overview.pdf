@@ -1,0 +1,246 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian)
+entering extended mode
+(./pdf/overview.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, croatian, bulgarian, ukrainian, russian, czech, slovak, danish, dut
+ch, finnish, french, basque, ngerman, german, german-x-2009-06-19, ngerman-x-20
+09-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, italian, latin, mo
+ngolian2a, mongolian, bokmal, nynorsk, romanian, irish, coptic, serbian, turkis
+h, welsh, esperanto, uppersorbian, estonian, indonesian, interlingua, icelandic
+, kurmanji, slovenian, polish, portuguese, spanish, galician, catalan, swedish,
+ loaded.
+(/usr/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/size10.clo))
+(/usr/share/texmf-texlive/tex/latex/base/fixltx2e.sty)
+(/usr/share/texmf-texlive/tex/latex/cmap/cmap.sty)
+(/usr/share/texmf-texlive/tex/latex/base/fontenc.sty
+(/usr/share/texmf-texlive/tex/latex/base/t1enc.def)<<t1.cmap>>)
+(/usr/share/texmf-texlive/tex/latex/base/inputenc.sty
+(/usr/share/texmf-texlive/tex/latex/base/utf8.def
+(/usr/share/texmf-texlive/tex/latex/base/t1enc.dfu)
+(/usr/share/texmf-texlive/tex/latex/base/ot1enc.dfu)
+(/usr/share/texmf-texlive/tex/latex/base/omsenc.dfu)))
+(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty)
+(/usr/share/texmf-texlive/tex/generic/babel/babel.sty
+(/usr/share/texmf-texlive/tex/generic/babel/english.ldf
+(/usr/share/texmf-texlive/tex/generic/babel/babel.def)))
+(/usr/share/texmf-texlive/tex/latex/tools/tabularx.sty
+(/usr/share/texmf-texlive/tex/latex/tools/array.sty))
+(/usr/share/texmf-texlive/tex/latex/psnfss/mathptmx.sty)
+(/usr/share/texmf-texlive/tex/latex/psnfss/helvet.sty
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty))
+(/usr/share/texmf-texlive/tex/latex/psnfss/courier.sty)
+(/usr/share/texmf-texlive/tex/latex/hyperref/hyperref.sty
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifvtex.sty)
+(/usr/share/texmf-texlive/tex/generic/ifxetex/ifxetex.sty)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/hycolor.sty
+(/usr/share/texmf-texlive/tex/latex/oberdiek/xcolor-patch.sty))
+(/usr/share/texmf-texlive/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/etexcmds.sty
+(/usr/share/texmf-texlive/tex/generic/oberdiek/infwarerr.sty))
+(/etc/texmf/tex/latex/config/hyperref.cfg)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/kvoptions.sty
+(/usr/share/texmf-texlive/tex/generic/oberdiek/kvsetkeys.sty))
+(/usr/share/texmf-texlive/tex/latex/hyperref/puenc.def)
+Implicit mode ON; LaTeX internals redefined
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/bitset.sty
+(/usr/share/texmf-texlive/tex/generic/oberdiek/intcalc.sty)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/bigintcalc.sty
+(/usr/share/texmf-texlive/tex/generic/oberdiek/pdftexcmds.sty
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifluatex.sty)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ltxcmds.sty))))
+(/usr/share/texmf-texlive/tex/generic/oberdiek/atbegshi.sty))
+*hyperref using default driver hpdftex*
+(/usr/share/texmf-texlive/tex/latex/hyperref/hpdftex.def)
+No file overview.aux.
+(/usr/share/texmf-texlive/tex/latex/psnfss/t1ptm.fd)
+(/usr/share/texmf-texlive/tex/latex/graphics/color.sty
+(/etc/texmf/tex/latex/config/color.cfg)
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+))) (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
+(/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty))
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1ztmcm.fd)<<ot1.cmap>>
+(/usr/share/texmf-texlive/tex/latex/psnfss/omlztmcm.fd)<<oml.cmap>>
+(/usr/share/texmf-texlive/tex/latex/psnfss/omsztmcm.fd)<<oms.cmap>>
+(/usr/share/texmf-texlive/tex/latex/psnfss/omxztmcm.fd)<<omx.cmap>>
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1ptm.fd)
+(/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd)
+Overfull \hbox (4.40611pt too wide) in paragraph at lines 157--160
+[]\T1/ptm/m/n/10 Hardware ab-strac-tions in TinyOS 2.0 gen-er-ally fol-low a th
+ree-level ab-stac-tion heirar-
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Hyper reference `tep2' on page 2 undefined on input line 185.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/omsptm.fd) [2]
+
+LaTeX Warning: Hyper reference `tep106' on page 3 undefined on input line 254.
+
+
+LaTeX Warning: Hyper reference `tep107' on page 3 undefined on input line 275.
+
+
+Overfull \hbox (1.54659pt too wide) in paragraph at lines 293--300
+\T1/ptm/m/n/10 than wire to a com-po-nent with a pa-ram-e-ter-ized in-ter-face 
+(e.g., Gener-ic-Comm or TimerC
+
+LaTeX Warning: Hyper reference `tep102' on page 3 undefined on input line 320.
+
+[3]
+
+LaTeX Warning: Hyper reference `tep111' on page 4 undefined on input line 394.
+
+
+LaTeX Warning: Hyper reference `tep116' on page 4 undefined on input line 395.
+
+[4]
+Overfull \hbox (2.59688pt too wide) in paragraph at lines 415--422
+\T1/ptm/m/n/10 HAL, which gives it the full power of the un-der-ly-ing plat-for
+m (highly ac-cu-rate platform-
+
+LaTeX Warning: Hyper reference `tep101' on page 5 undefined on input line 424.
+
+
+LaTeX Warning: Hyper reference `tep109' on page 5 undefined on input line 426.
+
+
+LaTeX Warning: Hyper reference `tep114' on page 5 undefined on input line 427.
+
+
+LaTeX Warning: Hyper reference `tep108' on page 5 undefined on input line 491.
+
+[5]
+
+LaTeX Warning: Hyper reference `tep112' on page 6 undefined on input line 505.
+
+
+LaTeX Warning: Hyper reference `tep115' on page 6 undefined on input line 508.
+
+[6]
+Underfull \hbox (badness 2393) in paragraph at lines 607--609
+[][]\T1/ptm/m/n/10 [TEP1] TEP 1: TEP Struc-ture and Key-words. [][]$http : / / 
+tinyos . cvs . sourceforge .
+
+Underfull \hbox (badness 10000) in paragraph at lines 607--609
+\T1/ptm/m/n/10 net/$[][]\T1/ptm/m/it/10 checkout\T1/ptm/m/n/10 /tinyos/tinyos-2
+.x/doc/html/tep1.html?pathrev=tinyos-2_0_devel-
+
+Underfull \hbox (badness 10000) in paragraph at lines 610--612
+\T1/ptm/m/n/10 net/$[][]\T1/ptm/m/it/10 checkout\T1/ptm/m/n/10 /tinyos/tinyos-2
+.x/doc/html/tep2.html?pathrev=tinyos-2_0_devel-
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--615
+[][]\T1/ptm/m/n/10 [TEP3] TEP 3: Cod-ing Stan-dard. [][]$http : / / tinyos . cv
+s . sourceforge .
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--615
+\T1/ptm/m/n/10 net/$[][]\T1/ptm/m/it/10 checkout\T1/ptm/m/n/10 /tinyos/tinyos-2
+.x/doc/html/tep3.html?pathrev=tinyos-2_0_devel-
+
+Underfull \hbox (badness 10000) in paragraph at lines 616--618
+\T1/ptm/m/n/10 net/$[][]\T1/ptm/m/it/10 checkout\T1/ptm/m/n/10 /tinyos/tinyos-2
+.x/doc/html/tep101.html?pathrev=tinyos-2_0_devel-
+
+Underfull \hbox (badness 6542) in paragraph at lines 622--624
+[][]\T1/ptm/m/n/10 [TEP106] TEP 106: Sched-ulers and Tasks. [][]$http : / / tin
+yos . cvs . sourceforge .
+
+Underfull \hbox (badness 10000) in paragraph at lines 622--624
+\T1/ptm/m/n/10 net/$[][]\T1/ptm/m/it/10 checkout\T1/ptm/m/n/10 /tinyos/tinyos-2
+.x/doc/html/tep106.html?pathrev=tinyos-2_0_devel-
+
+Underfull \hbox (badness 10000) in paragraph at lines 625--627
+[][]\T1/ptm/m/n/10 [TEP107] TEP 107: Boot Se-quence. [][]$http : / / tinyos . c
+vs . sourceforge .
+
+Underfull \hbox (badness 10000) in paragraph at lines 625--627
+\T1/ptm/m/n/10 net/$[][]\T1/ptm/m/it/10 checkout\T1/ptm/m/n/10 /tinyos/tinyos-2
+.x/doc/html/tep107.html?pathrev=tinyos-2_0_devel-
+
+Underfull \hbox (badness 10000) in paragraph at lines 628--630
+[][]\T1/ptm/m/n/10 [TEP108] TEP 108: mes-sage_t. [][]$http : / / tinyos . cvs .
+ sourceforge .
+
+Underfull \hbox (badness 10000) in paragraph at lines 628--630
+\T1/ptm/m/n/10 net/$[][]\T1/ptm/m/it/10 checkout\T1/ptm/m/n/10 /tinyos/tinyos-2
+.x/doc/html/tep108.html?pathrev=tinyos-2_0_devel-
+
+Underfull \hbox (badness 10000) in paragraph at lines 631--633
+[][]\T1/ptm/m/n/10 [TEP109] TEP 109: Sen-sor-boards. [][]$http : / / tinyos . c
+vs . sourceforge .
+
+Underfull \hbox (badness 10000) in paragraph at lines 631--633
+\T1/ptm/m/n/10 net/$[][]\T1/ptm/m/it/10 checkout\T1/ptm/m/n/10 /tinyos/tinyos-2
+.x/doc/html/tep109.html?pathrev=tinyos-2_0_devel-
+
+Underfull \hbox (badness 10000) in paragraph at lines 634--636
+[][]\T1/ptm/m/n/10 [TEP110] TEP 110: Ser-vice Dis-tri-bu-tions. [][]$http : / /
+ tinyos . cvs . sourceforge .
+
+Underfull \hbox (badness 10000) in paragraph at lines 634--636
+\T1/ptm/m/n/10 net/$[][]\T1/ptm/m/it/10 checkout\T1/ptm/m/n/10 /tinyos/tinyos-2
+.x/doc/html/tep110.html?pathrev=tinyos-2_0_devel-
+
+Underfull \hbox (badness 10000) in paragraph at lines 637--639
+[][]\T1/ptm/m/n/10 [TEP111] TEP 111: mes-sage_t. [][]$http : / / tinyos . cvs .
+ sourceforge .
+
+Underfull \hbox (badness 10000) in paragraph at lines 637--639
+\T1/ptm/m/n/10 net/$[][]\T1/ptm/m/it/10 checkout\T1/ptm/m/n/10 /tinyos/tinyos-2
+.x/doc/html/tep111.html?pathrev=tinyos-2_0_devel-
+
+Underfull \hbox (badness 3439) in paragraph at lines 640--642
+[][]\T1/ptm/m/n/10 [TEP112] TEP 112: Mi-cro-con-troller Power Man-age-ment. [][
+]$http : / / tinyos . cvs .
+
+Underfull \hbox (badness 10000) in paragraph at lines 640--642
+\T1/ptm/m/n/10 sourceforge . net/$[][]\T1/ptm/m/it/10 checkout\T1/ptm/m/n/10 /t
+inyos/tinyos-2.x/doc/html/tep112.html?pathrev=tinyos-
+
+Underfull \hbox (badness 7203) in paragraph at lines 643--645
+[][]\T1/ptm/m/n/10 [TEP113] TEP 113: Se-rial Com-mu-ni-ca-tion. [][]$http : / /
+ tinyos . cvs . sourceforge .
+
+Underfull \hbox (badness 10000) in paragraph at lines 643--645
+\T1/ptm/m/n/10 net/$[][]\T1/ptm/m/it/10 checkout\T1/ptm/m/n/10 /tinyos/tinyos-2
+.x/doc/html/tep113.html?pathrev=tinyos-2_0_devel-
+
+Underfull \hbox (badness 10000) in paragraph at lines 646--648
+\T1/ptm/m/n/10 cvs . sourceforge . net/$[][]\T1/ptm/m/it/10 checkout\T1/ptm/m/n
+/10 /tinyos/tinyos-2.x/doc/html/tep114.html?pathrev=tinyos-
+
+Underfull \hbox (badness 10000) in paragraph at lines 649--651
+\T1/ptm/m/n/10 cvs . sourceforge . net/$[][]\T1/ptm/m/it/10 checkout\T1/ptm/m/n
+/10 /tinyos/tinyos-2.x/doc/html/tep115.html?pathrev=tinyos-
+
+Underfull \hbox (badness 10000) in paragraph at lines 652--654
+[][]\T1/ptm/m/n/10 [TEP116] TEP 116: Packet Pro-to-cols. [][]$http : / / tinyos
+ . cvs . sourceforge .
+
+Underfull \hbox (badness 10000) in paragraph at lines 652--654
+\T1/ptm/m/n/10 net/$[][]\T1/ptm/m/it/10 checkout\T1/ptm/m/n/10 /tinyos/tinyos-2
+.x/doc/html/tep116.html?pathrev=tinyos-2_0_devel-
+[7] [8] [9] (./overview.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)pdfTeX warning (dest): name
+{??} has been referenced but does not exist, replaced by a fixed one
+
+{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type
+1/urw/courier/ucrr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a
+.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
+mf-texlive/fonts/type1/urw/times/utmri8a.pfb>
+Output written on overview.pdf (9 pages, 110200 bytes).
+Transcript written on overview.log.

@@ -1,0 +1,7 @@
+#-*-Makefile-*- vim:syntax=make
+#$Id: clean.target,v 1.1.2.2.6.1 2006-05-15 18:35:28 klueska Exp $
+
+clean: FORCE
+	rm -rf $(BUILDDIR_TOP)
+	rm -rf _TOSSIMmodule.so TOSSIM.pyc TOSSIM.py
+
