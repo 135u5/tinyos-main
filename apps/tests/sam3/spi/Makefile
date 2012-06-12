@@ -1,2 +1,0 @@
-COMPONENT=TestSpiAppC
-include $(MAKERULES)

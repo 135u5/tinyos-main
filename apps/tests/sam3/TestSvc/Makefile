@@ -1,2 +1,0 @@
-COMPONENT=TestSvcAppC
-include $(MAKERULES)

@@ -1,3 +1,0 @@
-COMPONENT=DacAppC
-include $(MAKERULES)
-

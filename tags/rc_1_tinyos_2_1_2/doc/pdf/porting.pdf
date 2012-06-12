@@ -1,0 +1,106 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian)
+entering extended mode
+(./pdf/porting.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, croatian, bulgarian, ukrainian, russian, czech, slovak, danish, dut
+ch, finnish, french, basque, ngerman, german, german-x-2009-06-19, ngerman-x-20
+09-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, italian, latin, mo
+ngolian2a, mongolian, bokmal, nynorsk, romanian, irish, coptic, serbian, turkis
+h, welsh, esperanto, uppersorbian, estonian, indonesian, interlingua, icelandic
+, kurmanji, slovenian, polish, portuguese, spanish, galician, catalan, swedish,
+ loaded.
+(/usr/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/size10.clo))
+(/usr/share/texmf-texlive/tex/latex/base/fixltx2e.sty)
+(/usr/share/texmf-texlive/tex/latex/cmap/cmap.sty)
+(/usr/share/texmf-texlive/tex/latex/base/fontenc.sty
+(/usr/share/texmf-texlive/tex/latex/base/t1enc.def)<<t1.cmap>>)
+(/usr/share/texmf-texlive/tex/latex/base/inputenc.sty
+(/usr/share/texmf-texlive/tex/latex/base/utf8.def
+(/usr/share/texmf-texlive/tex/latex/base/t1enc.dfu)
+(/usr/share/texmf-texlive/tex/latex/base/ot1enc.dfu)
+(/usr/share/texmf-texlive/tex/latex/base/omsenc.dfu)))
+(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty)
+(/usr/share/texmf-texlive/tex/generic/babel/babel.sty
+(/usr/share/texmf-texlive/tex/generic/babel/english.ldf
+(/usr/share/texmf-texlive/tex/generic/babel/babel.def)))
+(/usr/share/texmf-texlive/tex/latex/tools/tabularx.sty
+(/usr/share/texmf-texlive/tex/latex/tools/array.sty))
+(/usr/share/texmf-texlive/tex/latex/psnfss/mathptmx.sty)
+(/usr/share/texmf-texlive/tex/latex/psnfss/helvet.sty
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty))
+(/usr/share/texmf-texlive/tex/latex/psnfss/courier.sty)
+(/usr/share/texmf-texlive/tex/latex/hyperref/hyperref.sty
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifvtex.sty)
+(/usr/share/texmf-texlive/tex/generic/ifxetex/ifxetex.sty)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/hycolor.sty
+(/usr/share/texmf-texlive/tex/latex/oberdiek/xcolor-patch.sty))
+(/usr/share/texmf-texlive/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/etexcmds.sty
+(/usr/share/texmf-texlive/tex/generic/oberdiek/infwarerr.sty))
+(/etc/texmf/tex/latex/config/hyperref.cfg)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/kvoptions.sty
+(/usr/share/texmf-texlive/tex/generic/oberdiek/kvsetkeys.sty))
+(/usr/share/texmf-texlive/tex/latex/hyperref/puenc.def)
+Implicit mode ON; LaTeX internals redefined
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/bitset.sty
+(/usr/share/texmf-texlive/tex/generic/oberdiek/intcalc.sty)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/bigintcalc.sty
+(/usr/share/texmf-texlive/tex/generic/oberdiek/pdftexcmds.sty
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifluatex.sty)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ltxcmds.sty))))
+(/usr/share/texmf-texlive/tex/generic/oberdiek/atbegshi.sty))
+*hyperref using default driver hpdftex*
+(/usr/share/texmf-texlive/tex/latex/hyperref/hpdftex.def)
+No file porting.aux.
+(/usr/share/texmf-texlive/tex/latex/psnfss/t1ptm.fd)
+(/usr/share/texmf-texlive/tex/latex/graphics/color.sty
+(/etc/texmf/tex/latex/config/color.cfg)
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+))) (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
+(/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty))
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1ztmcm.fd)<<ot1.cmap>>
+(/usr/share/texmf-texlive/tex/latex/psnfss/omlztmcm.fd)<<oml.cmap>>
+(/usr/share/texmf-texlive/tex/latex/psnfss/omsztmcm.fd)<<oms.cmap>>
+(/usr/share/texmf-texlive/tex/latex/psnfss/omxztmcm.fd)<<omx.cmap>>
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1ptm.fd)
+
+LaTeX Warning: Hyper reference `id1' on page 1 undefined on input line 119.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd)
+Overfull \hbox (22.76743pt too wide) in paragraph at lines 174--175
+\T1/ptm/m/n/10 ob-tained by us-ing ``msg -> addr''. In-stead the AM-Packet.dest
+ination()
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (60.61678pt too wide) in paragraph at lines 176--177
+\T1/ptm/m/n/10 >strength'' to get the strength of a re-ceived sig-nal, CC2420Pa
+cket.getRssi(msg)
+
+Overfull \hbox (1.19743pt too wide) in paragraph at lines 184--185
+\T1/ptm/m/n/10 tinc-tion be-tween the lo-cal node's ID (which is TOS_NODE_ID)
+
+Overfull \hbox (2.21782pt too wide) in paragraph at lines 186--187
+[]\T1/ptm/m/n/10 Calls such as Leds.greenToggle(), Leds.yellowToggle() etc need
+
+[2] [3] (./porting.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)pdfTeX warning (dest): name
+{??} has been referenced but does not exist, replaced by a fixed one
+
+{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive
+/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/t
+imes/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb>
+Output written on porting.pdf (3 pages, 57220 bytes).
+Transcript written on porting.log.

@@ -1,2 +1,0 @@
-COMPONENT=TestMpuProtectionAppC
-include $(MAKERULES)

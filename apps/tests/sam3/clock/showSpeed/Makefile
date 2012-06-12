@@ -1,2 +1,0 @@
-COMPONENT=ClockSpeedAppC
-include $(MAKERULES)

@@ -1,4 +1,0 @@
-ifeq ($(USELEDS),)
-USELEDS=1
-endif
-PFLAGS += -DUSE_LEDS=$(USELEDS)

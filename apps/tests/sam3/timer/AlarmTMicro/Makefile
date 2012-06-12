@@ -1,2 +1,0 @@
-COMPONENT=TestAlarmTMicroAppC
-include $(MAKERULES)

@@ -1,4 +1,0 @@
-ifeq ($(USEMUX),)
-USEMUX=1
-endif
-PFLAGS += -DUSE_MUX=$(USEMUX)

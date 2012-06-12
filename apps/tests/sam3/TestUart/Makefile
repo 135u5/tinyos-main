@@ -1,2 +1,0 @@
-COMPONENT=TestUartAppC
-include $(MAKERULES)

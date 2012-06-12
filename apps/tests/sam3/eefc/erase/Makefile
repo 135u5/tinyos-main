@@ -1,2 +1,0 @@
-COMPONENT=MoteAppC
-include $(MAKERULES)
